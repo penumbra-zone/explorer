@@ -1,24 +1,24 @@
 {
-  "title": "Cosmos Block Explorer",
-  "network": "theta-testnet-001",
-  "icon": "/images/icon.svg",
+  "title": "Penumbra Block Explorer",
+  "network": "erinome",
+  "icon": "https://penumbra.zone/static/penumbra-logo-136e1ce0eb303e0d6f8b349d5128d1cb.svg",
   "logo": {
-    "default": "/images/logo.svg"
+    "default": "https://penumbra.zone/static/penumbra-logo-136e1ce0eb303e0d6f8b349d5128d1cb.svg"
   },
   "prefix": {
-    "consensus": "cosmosvalcons",
-    "validator": "cosmosvaloper",
-    "account": "cosmos"
+    "consensus": "penumbravalcons",
+    "validator": "penumbravalconspub",
+    "account": "penumbra"
   },
   "genesis": {
-    "time": "2021-07-13T08:00:00",
+    "time": "2022-07-13T08:00:00",
     "height": 1
   },
-  "primaryTokenUnit": "uatom",
-  "votingPowerTokenUnit": "uatom",
+  "primaryTokenUnit": "udaric",
+  "votingPowerTokenUnit": "udaric",
   "tokenUnits": {
-    "uatom": {
-      "display": "atom",
+    "udaric": {
+      "display": "daric",
       "exponent": 6
     }
   },
