@@ -1,9 +1,9 @@
 {
   "title": "Penumbra Block Explorer",
   "network": "erinome",
-  "icon": "https://penumbra.zone/static/penumbra-logo-136e1ce0eb303e0d6f8b349d5128d1cb.svg",
+  "icon": "/images/penumbra-logo.svg",
   "logo": {
-    "default": "https://penumbra.zone/static/penumbra-logo-136e1ce0eb303e0d6f8b349d5128d1cb.svg"
+    "default": "/images/penumbra-logo.svg"
   },
   "prefix": {
     "consensus": "penumbravalcons",
@@ -11,7 +11,7 @@
     "account": "penumbra"
   },
   "genesis": {
-    "time": "2022-07-13T08:00:00",
+    "time": "2021-07-13T08:00:00",
     "height": 1
   },
   "primaryTokenUnit": "udaric",
