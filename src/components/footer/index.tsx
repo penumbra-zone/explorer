@@ -47,52 +47,52 @@ const Footer: React.FC<{className?: string}> = ({ className }) => {
         {/* ============================= */}
         {/* links */}
         {/* ============================= */}
-        <div className="footer__links">
-          {footerLinks.map((group) => {
-            return (
-              <div key={group.key} className={`${group.key} links__group`}>
-                <h3>{t(`common:${group.key}`)}</h3>
-                {
-                    group.links.map((x) => {
-                      return (
-                        <a
-                          key={x.url}
-                          href={x.url}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          {t(`common:${x.key}`)}
-                        </a>
-                      );
-                    })
-                  }
-              </div>
-            );
-          })}
-          {/* ============================= */}
-          {/* social */}
-          {/* ============================= */}
-          <div className="footer__social">
-            <h3>{t('common:community')}</h3>
-            <SocialMedia />
-            <div>
-              <p className="footer__donate--excerpt">{t('common:donateExcerpt')}</p>
-              <a
-                href={donateLink.url}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Button
-                  className="footer__donate-button"
-                  variant="contained"
-                  color="primary"
-                >
-                  {t('common:donate')}
-                </Button>
-              </a>
-            </div>
-          </div>
-        </div>
+      {/*  <div className="footer__links">*/}
+      {/*    {footerLinks.map((group) => {*/}
+      {/*      return (*/}
+      {/*        <div key={group.key} className={`${group.key} links__group`}>*/}
+      {/*          <h3>{t(`common:${group.key}`)}</h3>*/}
+      {/*          {*/}
+      {/*              group.links.map((x) => {*/}
+      {/*                return (*/}
+      {/*                  <a*/}
+      {/*                    key={x.url}*/}
+      {/*                    href={x.url}*/}
+      {/*                    target="_blank"*/}
+      {/*                    rel="noreferrer"*/}
+      {/*                  >*/}
+      {/*                    {t(`common:${x.key}`)}*/}
+      {/*                  </a>*/}
+      {/*                );*/}
+      {/*              })*/}
+      {/*            }*/}
+      {/*        </div>*/}
+      {/*      );*/}
+      {/*    })}*/}
+      {/*    /!* ============================= *!/*/}
+      {/*    /!* social *!/*/}
+      {/*    /!* ============================= *!/*/}
+      {/*    <div className="footer__social">*/}
+      {/*      <h3>{t('common:community')}</h3>*/}
+      {/*      <SocialMedia />*/}
+      {/*      <div>*/}
+      {/*        <p className="footer__donate--excerpt">{t('common:donateExcerpt')}</p>*/}
+      {/*        <a*/}
+      {/*          href={donateLink.url}*/}
+      {/*          target="_blank"*/}
+      {/*          rel="noreferrer"*/}
+      {/*        >*/}
+      {/*          <Button*/}
+      {/*            className="footer__donate-button"*/}
+      {/*            variant="contained"*/}
+      {/*            color="primary"*/}
+      {/*          >*/}
+      {/*            {t('common:donate')}*/}
+      {/*          </Button>*/}
+      {/*        </a>*/}
+      {/*      </div>*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
       </div>
       <Divider />
       <div className="footer__closing--container">
