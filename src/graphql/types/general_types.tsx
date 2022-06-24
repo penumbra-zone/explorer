@@ -72,8 +72,13 @@ export type ActionValidatorCommissionAmount = {
   coins?: Maybe<Array<Maybe<Scalars['ActionCoin']>>>;
 };
 
+export type Boolean_Cast_Exp = {
+  String?: Maybe<String_Comparison_Exp>;
+};
+
 /** Boolean expression to compare columns of type "Boolean". All fields are combined with logical 'AND'. */
 export type Boolean_Comparison_Exp = {
+  _cast?: Maybe<Boolean_Cast_Exp>;
   _eq?: Maybe<Scalars['Boolean']>;
   _gt?: Maybe<Scalars['Boolean']>;
   _gte?: Maybe<Scalars['Boolean']>;
@@ -85,8 +90,13 @@ export type Boolean_Comparison_Exp = {
   _nin?: Maybe<Array<Scalars['Boolean']>>;
 };
 
+export type Int_Cast_Exp = {
+  String?: Maybe<String_Comparison_Exp>;
+};
+
 /** Boolean expression to compare columns of type "Int". All fields are combined with logical 'AND'. */
 export type Int_Comparison_Exp = {
+  _cast?: Maybe<Int_Cast_Exp>;
   _eq?: Maybe<Scalars['Int']>;
   _gt?: Maybe<Scalars['Int']>;
   _gte?: Maybe<Scalars['Int']>;
@@ -887,8 +897,13 @@ export type Average_Block_Time_Per_Minute_Variance_Fields = {
 };
 
 
+export type Bigint_Cast_Exp = {
+  String?: Maybe<String_Comparison_Exp>;
+};
+
 /** Boolean expression to compare columns of type "bigint". All fields are combined with logical 'AND'. */
 export type Bigint_Comparison_Exp = {
+  _cast?: Maybe<Bigint_Cast_Exp>;
   _eq?: Maybe<Scalars['bigint']>;
   _gt?: Maybe<Scalars['bigint']>;
   _gte?: Maybe<Scalars['bigint']>;
@@ -2719,8 +2734,13 @@ export type Inflation_Variance_Fields = {
 };
 
 
+export type Jsonb_Cast_Exp = {
+  String?: Maybe<String_Comparison_Exp>;
+};
+
 /** Boolean expression to compare columns of type "jsonb". All fields are combined with logical 'AND'. */
 export type Jsonb_Comparison_Exp = {
+  _cast?: Maybe<Jsonb_Cast_Exp>;
   /** is the column contained in the given json value */
   _contained_in?: Maybe<Scalars['jsonb']>;
   /** does the column contain the given json value at the top level */
@@ -3119,8 +3139,13 @@ export enum Modules_Select_Column {
 }
 
 
+export type Numeric_Cast_Exp = {
+  String?: Maybe<String_Comparison_Exp>;
+};
+
 /** Boolean expression to compare columns of type "numeric". All fields are combined with logical 'AND'. */
 export type Numeric_Comparison_Exp = {
+  _cast?: Maybe<Numeric_Cast_Exp>;
   _eq?: Maybe<Scalars['numeric']>;
   _gt?: Maybe<Scalars['numeric']>;
   _gte?: Maybe<Scalars['numeric']>;
@@ -6301,8 +6326,13 @@ export type Slashing_Params_Variance_Fields = {
 };
 
 
+export type Smallint_Cast_Exp = {
+  String?: Maybe<String_Comparison_Exp>;
+};
+
 /** Boolean expression to compare columns of type "smallint". All fields are combined with logical 'AND'. */
 export type Smallint_Comparison_Exp = {
+  _cast?: Maybe<Smallint_Cast_Exp>;
   _eq?: Maybe<Scalars['smallint']>;
   _gt?: Maybe<Scalars['smallint']>;
   _gte?: Maybe<Scalars['smallint']>;
@@ -7808,8 +7838,13 @@ export type Supply_Variance_Fields = {
 };
 
 
+export type Timestamp_Cast_Exp = {
+  String?: Maybe<String_Comparison_Exp>;
+};
+
 /** Boolean expression to compare columns of type "timestamp". All fields are combined with logical 'AND'. */
 export type Timestamp_Comparison_Exp = {
+  _cast?: Maybe<Timestamp_Cast_Exp>;
   _eq?: Maybe<Scalars['timestamp']>;
   _gt?: Maybe<Scalars['timestamp']>;
   _gte?: Maybe<Scalars['timestamp']>;
