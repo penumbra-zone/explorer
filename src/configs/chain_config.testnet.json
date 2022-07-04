@@ -7,19 +7,19 @@
   },
   "prefix": {
     "consensus": "penumbravalcons",
-    "validator": "penumbravalconspub",
-    "account": "penumbra"
+    "validator": "penumbraval",
+    "account": "penumbra1t"
   },
   "genesis": {
     "time": "2021-07-13T08:00:00",
     "height": 1
   },
-  "primaryTokenUnit": "udaric",
-  "votingPowerTokenUnit": "udaric",
+  "primaryTokenUnit": "penumbra",
+  "votingPowerTokenUnit": "penumbra",
   "tokenUnits": {
     "udaric": {
-      "display": "daric",
-      "exponent": 6
+      "display": "penumbra",
+      "exponent": 1
     }
   },
   "extra": {
