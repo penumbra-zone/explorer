@@ -19,9 +19,9 @@ const VotingPower: React.FC<{
         <Typography variant="body1">
           {content}
         </Typography>
-        <Typography variant="body1" className="percentage">
-          {percentDisplay}
-        </Typography>
+        {/*<Typography variant="body1" className="percentage">*/}
+        {/*  {percentDisplay}*/}
+        {/*</Typography>*/}
       </div>
       <div className={classes.chart}>
         <div className={classes.active} />
