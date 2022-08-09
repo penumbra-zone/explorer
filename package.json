@@ -50,7 +50,7 @@
     "react-virtualized-auto-sizer": "^1.0.4",
     "react-window": "^1.8.6",
     "react-window-infinite-loader": "^1.0.7",
-    "recharts": "^2.0.8",
+    "recharts": "2.1.12",
     "recoil": "^0.4.1",
     "subscriptions-transport-ws": "^0.10.0"
   },
