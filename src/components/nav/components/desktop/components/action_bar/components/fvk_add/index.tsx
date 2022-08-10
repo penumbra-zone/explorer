@@ -55,7 +55,7 @@ const FvkAdd = () => {
       >
         <DialogTitle disableTypography className={classes.header}>
           <div className={classes.title}>
-            <Typography variant="h2">Settings Full Viewing Key</Typography>
+            <Typography variant="h2">Settings full viewing key</Typography>
           </div>
           <IconButton aria-label="close" onClick={handleClose}>
             <CloseIcon />
@@ -65,8 +65,8 @@ const FvkAdd = () => {
           <form>
             <div className={classes.formItem}>
               <TextField
-                label="Full Viewing Key"
-                variant="standard"
+                placeholder="Full viewing key"
+                variant="outlined"
                 value={state}
                 onChange={handleChangeState}
                 disabled={isSavedFVK}
