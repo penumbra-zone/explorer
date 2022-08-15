@@ -7,6 +7,7 @@ module.exports = nextTranslate({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     });
+    config.experiments = { asyncWebAssembly: true };
     return config;
   },
 });
