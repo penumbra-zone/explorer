@@ -13,5 +13,9 @@ query TransactionDetails($hash: String) {
     messages: messages
     logs
     rawLog: raw_log
+    notes: notes{
+      ephemeral_key
+      encrypted_note
+    }
   }
 }
