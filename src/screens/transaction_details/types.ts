@@ -8,7 +8,12 @@ export type OverviewType = {
   success: boolean;
   memo: string;
   error: string;
-}
+};
+
+export type TransactionNote = {
+  ephemeralKey: string;
+  encryptedNote: string;
+};
 
 export type TransactionState = {
   loading: boolean;
@@ -19,5 +24,16 @@ export type TransactionState = {
     filterBy: string;
     viewRaw: boolean;
     items: any[];
-  }
-}
+  };
+  notes: TransactionNote[];
+};
+
+export type DecryptNote = {
+  diversifier: string;
+  noteBlinding: string;
+  transmissionKey: string;
+  value: {
+    amount: number;
+    assetId: string;
+  };
+};

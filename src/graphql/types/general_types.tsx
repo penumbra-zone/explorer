@@ -3138,6 +3138,242 @@ export enum Modules_Select_Column {
   ModuleName = 'module_name'
 }
 
+/** columns and relationships of "note" */
+export type Note = {
+  __typename?: 'note';
+  encrypted_note: Scalars['String'];
+  ephemeral_key: Scalars['String'];
+  hash?: Maybe<Scalars['String']>;
+  id: Scalars['Int'];
+  partition_id?: Maybe<Scalars['Int']>;
+  /** An object relationship */
+  transaction?: Maybe<Transaction>;
+};
+
+/** aggregated selection of "note" */
+export type Note_Aggregate = {
+  __typename?: 'note_aggregate';
+  aggregate?: Maybe<Note_Aggregate_Fields>;
+  nodes: Array<Note>;
+};
+
+/** aggregate fields of "note" */
+export type Note_Aggregate_Fields = {
+  __typename?: 'note_aggregate_fields';
+  avg?: Maybe<Note_Avg_Fields>;
+  count: Scalars['Int'];
+  max?: Maybe<Note_Max_Fields>;
+  min?: Maybe<Note_Min_Fields>;
+  stddev?: Maybe<Note_Stddev_Fields>;
+  stddev_pop?: Maybe<Note_Stddev_Pop_Fields>;
+  stddev_samp?: Maybe<Note_Stddev_Samp_Fields>;
+  sum?: Maybe<Note_Sum_Fields>;
+  var_pop?: Maybe<Note_Var_Pop_Fields>;
+  var_samp?: Maybe<Note_Var_Samp_Fields>;
+  variance?: Maybe<Note_Variance_Fields>;
+};
+
+
+/** aggregate fields of "note" */
+export type Note_Aggregate_FieldsCountArgs = {
+  columns?: Maybe<Array<Note_Select_Column>>;
+  distinct?: Maybe<Scalars['Boolean']>;
+};
+
+/** order by aggregate values of table "note" */
+export type Note_Aggregate_Order_By = {
+  avg?: Maybe<Note_Avg_Order_By>;
+  count?: Maybe<Order_By>;
+  max?: Maybe<Note_Max_Order_By>;
+  min?: Maybe<Note_Min_Order_By>;
+  stddev?: Maybe<Note_Stddev_Order_By>;
+  stddev_pop?: Maybe<Note_Stddev_Pop_Order_By>;
+  stddev_samp?: Maybe<Note_Stddev_Samp_Order_By>;
+  sum?: Maybe<Note_Sum_Order_By>;
+  var_pop?: Maybe<Note_Var_Pop_Order_By>;
+  var_samp?: Maybe<Note_Var_Samp_Order_By>;
+  variance?: Maybe<Note_Variance_Order_By>;
+};
+
+/** aggregate avg on columns */
+export type Note_Avg_Fields = {
+  __typename?: 'note_avg_fields';
+  id?: Maybe<Scalars['Float']>;
+  partition_id?: Maybe<Scalars['Float']>;
+};
+
+/** order by avg() on columns of table "note" */
+export type Note_Avg_Order_By = {
+  id?: Maybe<Order_By>;
+  partition_id?: Maybe<Order_By>;
+};
+
+/** Boolean expression to filter rows from the table "note". All fields are combined with a logical 'AND'. */
+export type Note_Bool_Exp = {
+  _and?: Maybe<Array<Note_Bool_Exp>>;
+  _not?: Maybe<Note_Bool_Exp>;
+  _or?: Maybe<Array<Note_Bool_Exp>>;
+  encrypted_note?: Maybe<String_Comparison_Exp>;
+  ephemeral_key?: Maybe<String_Comparison_Exp>;
+  hash?: Maybe<String_Comparison_Exp>;
+  id?: Maybe<Int_Comparison_Exp>;
+  partition_id?: Maybe<Int_Comparison_Exp>;
+  transaction?: Maybe<Transaction_Bool_Exp>;
+};
+
+/** aggregate max on columns */
+export type Note_Max_Fields = {
+  __typename?: 'note_max_fields';
+  encrypted_note?: Maybe<Scalars['String']>;
+  ephemeral_key?: Maybe<Scalars['String']>;
+  hash?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['Int']>;
+  partition_id?: Maybe<Scalars['Int']>;
+};
+
+/** order by max() on columns of table "note" */
+export type Note_Max_Order_By = {
+  encrypted_note?: Maybe<Order_By>;
+  ephemeral_key?: Maybe<Order_By>;
+  hash?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  partition_id?: Maybe<Order_By>;
+};
+
+/** aggregate min on columns */
+export type Note_Min_Fields = {
+  __typename?: 'note_min_fields';
+  encrypted_note?: Maybe<Scalars['String']>;
+  ephemeral_key?: Maybe<Scalars['String']>;
+  hash?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['Int']>;
+  partition_id?: Maybe<Scalars['Int']>;
+};
+
+/** order by min() on columns of table "note" */
+export type Note_Min_Order_By = {
+  encrypted_note?: Maybe<Order_By>;
+  ephemeral_key?: Maybe<Order_By>;
+  hash?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  partition_id?: Maybe<Order_By>;
+};
+
+/** Ordering options when selecting data from "note". */
+export type Note_Order_By = {
+  encrypted_note?: Maybe<Order_By>;
+  ephemeral_key?: Maybe<Order_By>;
+  hash?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  partition_id?: Maybe<Order_By>;
+  transaction?: Maybe<Transaction_Order_By>;
+};
+
+/** select columns of table "note" */
+export enum Note_Select_Column {
+  /** column name */
+  EncryptedNote = 'encrypted_note',
+  /** column name */
+  EphemeralKey = 'ephemeral_key',
+  /** column name */
+  Hash = 'hash',
+  /** column name */
+  Id = 'id',
+  /** column name */
+  PartitionId = 'partition_id'
+}
+
+/** aggregate stddev on columns */
+export type Note_Stddev_Fields = {
+  __typename?: 'note_stddev_fields';
+  id?: Maybe<Scalars['Float']>;
+  partition_id?: Maybe<Scalars['Float']>;
+};
+
+/** order by stddev() on columns of table "note" */
+export type Note_Stddev_Order_By = {
+  id?: Maybe<Order_By>;
+  partition_id?: Maybe<Order_By>;
+};
+
+/** aggregate stddev_pop on columns */
+export type Note_Stddev_Pop_Fields = {
+  __typename?: 'note_stddev_pop_fields';
+  id?: Maybe<Scalars['Float']>;
+  partition_id?: Maybe<Scalars['Float']>;
+};
+
+/** order by stddev_pop() on columns of table "note" */
+export type Note_Stddev_Pop_Order_By = {
+  id?: Maybe<Order_By>;
+  partition_id?: Maybe<Order_By>;
+};
+
+/** aggregate stddev_samp on columns */
+export type Note_Stddev_Samp_Fields = {
+  __typename?: 'note_stddev_samp_fields';
+  id?: Maybe<Scalars['Float']>;
+  partition_id?: Maybe<Scalars['Float']>;
+};
+
+/** order by stddev_samp() on columns of table "note" */
+export type Note_Stddev_Samp_Order_By = {
+  id?: Maybe<Order_By>;
+  partition_id?: Maybe<Order_By>;
+};
+
+/** aggregate sum on columns */
+export type Note_Sum_Fields = {
+  __typename?: 'note_sum_fields';
+  id?: Maybe<Scalars['Int']>;
+  partition_id?: Maybe<Scalars['Int']>;
+};
+
+/** order by sum() on columns of table "note" */
+export type Note_Sum_Order_By = {
+  id?: Maybe<Order_By>;
+  partition_id?: Maybe<Order_By>;
+};
+
+/** aggregate var_pop on columns */
+export type Note_Var_Pop_Fields = {
+  __typename?: 'note_var_pop_fields';
+  id?: Maybe<Scalars['Float']>;
+  partition_id?: Maybe<Scalars['Float']>;
+};
+
+/** order by var_pop() on columns of table "note" */
+export type Note_Var_Pop_Order_By = {
+  id?: Maybe<Order_By>;
+  partition_id?: Maybe<Order_By>;
+};
+
+/** aggregate var_samp on columns */
+export type Note_Var_Samp_Fields = {
+  __typename?: 'note_var_samp_fields';
+  id?: Maybe<Scalars['Float']>;
+  partition_id?: Maybe<Scalars['Float']>;
+};
+
+/** order by var_samp() on columns of table "note" */
+export type Note_Var_Samp_Order_By = {
+  id?: Maybe<Order_By>;
+  partition_id?: Maybe<Order_By>;
+};
+
+/** aggregate variance on columns */
+export type Note_Variance_Fields = {
+  __typename?: 'note_variance_fields';
+  id?: Maybe<Scalars['Float']>;
+  partition_id?: Maybe<Scalars['Float']>;
+};
+
+/** order by variance() on columns of table "note" */
+export type Note_Variance_Order_By = {
+  id?: Maybe<Order_By>;
+  partition_id?: Maybe<Order_By>;
+};
+
 
 export type Numeric_Cast_Exp = {
   String?: Maybe<String_Comparison_Exp>;
@@ -5085,6 +5321,12 @@ export type Query_Root = {
   modules_aggregate: Modules_Aggregate;
   /** fetch data from the table: "modules" using primary key columns */
   modules_by_pk?: Maybe<Modules>;
+  /** fetch data from the table: "note" */
+  note: Array<Note>;
+  /** fetch aggregated fields from the table: "note" */
+  note_aggregate: Note_Aggregate;
+  /** fetch data from the table: "note" using primary key columns */
+  note_by_pk?: Maybe<Note>;
   /** fetch data from the table: "pre_commit" */
   pre_commit: Array<Pre_Commit>;
   /** fetch aggregated fields from the table: "pre_commit" */
@@ -5667,6 +5909,29 @@ export type Query_RootModules_AggregateArgs = {
 
 export type Query_RootModules_By_PkArgs = {
   module_name: Scalars['String'];
+};
+
+
+export type Query_RootNoteArgs = {
+  distinct_on?: Maybe<Array<Note_Select_Column>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<Note_Order_By>>;
+  where?: Maybe<Note_Bool_Exp>;
+};
+
+
+export type Query_RootNote_AggregateArgs = {
+  distinct_on?: Maybe<Array<Note_Select_Column>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<Note_Order_By>>;
+  where?: Maybe<Note_Bool_Exp>;
+};
+
+
+export type Query_RootNote_By_PkArgs = {
+  id: Scalars['Int'];
 };
 
 
@@ -6694,6 +6959,12 @@ export type Subscription_Root = {
   modules_aggregate: Modules_Aggregate;
   /** fetch data from the table: "modules" using primary key columns */
   modules_by_pk?: Maybe<Modules>;
+  /** fetch data from the table: "note" */
+  note: Array<Note>;
+  /** fetch aggregated fields from the table: "note" */
+  note_aggregate: Note_Aggregate;
+  /** fetch data from the table: "note" using primary key columns */
+  note_by_pk?: Maybe<Note>;
   /** fetch data from the table: "pre_commit" */
   pre_commit: Array<Pre_Commit>;
   /** fetch aggregated fields from the table: "pre_commit" */
@@ -7190,6 +7461,29 @@ export type Subscription_RootModules_AggregateArgs = {
 
 export type Subscription_RootModules_By_PkArgs = {
   module_name: Scalars['String'];
+};
+
+
+export type Subscription_RootNoteArgs = {
+  distinct_on?: Maybe<Array<Note_Select_Column>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<Note_Order_By>>;
+  where?: Maybe<Note_Bool_Exp>;
+};
+
+
+export type Subscription_RootNote_AggregateArgs = {
+  distinct_on?: Maybe<Array<Note_Select_Column>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<Note_Order_By>>;
+  where?: Maybe<Note_Bool_Exp>;
+};
+
+
+export type Subscription_RootNote_By_PkArgs = {
+  id: Scalars['Int'];
 };
 
 
@@ -8705,6 +8999,10 @@ export type Transaction = {
   logs?: Maybe<Scalars['jsonb']>;
   memo?: Maybe<Scalars['String']>;
   messages: Scalars['jsonb'];
+  /** An array relationship */
+  notes: Array<Note>;
+  /** An aggregate relationship */
+  notes_aggregate: Note_Aggregate;
   partition_id: Scalars['bigint'];
   raw_log?: Maybe<Scalars['String']>;
   signatures: Scalars['_text'];
@@ -8728,6 +9026,26 @@ export type TransactionLogsArgs = {
 /** columns and relationships of "transaction" */
 export type TransactionMessagesArgs = {
   path?: Maybe<Scalars['String']>;
+};
+
+
+/** columns and relationships of "transaction" */
+export type TransactionNotesArgs = {
+  distinct_on?: Maybe<Array<Note_Select_Column>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<Note_Order_By>>;
+  where?: Maybe<Note_Bool_Exp>;
+};
+
+
+/** columns and relationships of "transaction" */
+export type TransactionNotes_AggregateArgs = {
+  distinct_on?: Maybe<Array<Note_Select_Column>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<Note_Order_By>>;
+  where?: Maybe<Note_Bool_Exp>;
 };
 
 
@@ -8812,6 +9130,7 @@ export type Transaction_Bool_Exp = {
   logs?: Maybe<Jsonb_Comparison_Exp>;
   memo?: Maybe<String_Comparison_Exp>;
   messages?: Maybe<Jsonb_Comparison_Exp>;
+  notes?: Maybe<Note_Bool_Exp>;
   partition_id?: Maybe<Bigint_Comparison_Exp>;
   raw_log?: Maybe<String_Comparison_Exp>;
   signatures?: Maybe<_Text_Comparison_Exp>;
@@ -8876,6 +9195,7 @@ export type Transaction_Order_By = {
   logs?: Maybe<Order_By>;
   memo?: Maybe<Order_By>;
   messages?: Maybe<Order_By>;
+  notes_aggregate?: Maybe<Note_Aggregate_Order_By>;
   partition_id?: Maybe<Order_By>;
   raw_log?: Maybe<Order_By>;
   signatures?: Maybe<Order_By>;
@@ -11658,7 +11978,10 @@ export type TransactionDetailsQuery = { transaction: Array<(
     & { block: (
       { __typename?: 'block' }
       & { timestamp: Block['timestamp'] }
-    ) }
+    ), notes: Array<(
+      { __typename?: 'note' }
+      & Pick<Note, 'ephemeral_key' | 'encrypted_note'>
+    )> }
   )> };
 
 export type TransactionsListenerSubscriptionVariables = Exact<{
@@ -13104,6 +13427,10 @@ export const TransactionDetailsDocument = gql`
     messages: messages
     logs
     rawLog: raw_log
+    notes: notes {
+      ephemeral_key
+      encrypted_note
+    }
   }
 }
     `;

@@ -9,8 +9,10 @@ import {
 } from '@graphql/types/general_types';
 import { formatToken } from '@utils/format_token';
 import { convertMsgsToModels } from '@msg';
+// eslint-disable-next-line import/order, camelcase
+import { decrypt_note } from 'penumbra-web-assembly';
 import {
-  TransactionState,
+  DecryptNote, TransactionState,
 } from './types';
 
 export const useTransactionDetails = () => {
@@ -40,7 +42,9 @@ export const useTransactionDetails = () => {
       viewRaw: false,
       items: [],
     },
+    notes: [],
   });
+  const [decryptNotes, setDecryptNote] = useState<DecryptNote[]>([]);
 
   const handleSetState = (stateChange: any) => {
     setState((prevState) => R.mergeDeepLeft(stateChange, prevState));
@@ -52,6 +56,43 @@ export const useTransactionDetails = () => {
       exists: true,
     });
   }, [router.query.tx]);
+
+  // ===============================
+  // Decrypt notes
+  // ===============================
+  useEffect(() => {
+    const fvk = localStorage.getItem('fvk');
+    if (!state.notes.length || !fvk) return;
+    const arr = [];
+    const getDecrypto = async (i: number) => {
+      const item = state.notes[i];
+
+      try {
+        const decryptNote = await decrypt_note(
+          fvk,
+          item.encryptedNote,
+          // eslint-disable-next-line comma-dangle
+          item.ephemeralKey
+        );
+        arr.push({
+          diversifier: decryptNote.diversifier,
+          noteBlinding: decryptNote.note_blinding,
+          transmissionKey: decryptNote.transmission_key,
+          value: {
+            amount: decryptNote.value.amount,
+            assetId: decryptNote.value.asset_id,
+          },
+        });
+      } catch (e) {
+        setDecryptNote([]);
+      }
+    };
+    // eslint-disable-next-line no-plusplus
+    for (let i = 0; i < state.notes.length; i++) {
+      getDecrypto(i);
+    }
+    setDecryptNote(arr);
+  }, [state.notes]);
 
   // ===============================
   // Fetch data
@@ -83,10 +124,14 @@ export const useTransactionDetails = () => {
     // =============================
     const formatOverview = () => {
       const { fee } = data.transaction[0];
-      const feeAmount = R.pathOr({
-        denom: '',
-        amount: 0,
-      }, ['amount', 0], fee);
+      const feeAmount = R.pathOr(
+        {
+          denom: '',
+          amount: 0,
+        },
+        ['amount', 0],
+        fee,
+      );
       const { success } = data.transaction[0];
       const overview = {
         hash: data.transaction[0].hash,
@@ -103,6 +148,14 @@ export const useTransactionDetails = () => {
     };
 
     stateChange.overview = formatOverview();
+
+    // =============================
+    // notes
+    // =============================
+    stateChange.notes = data.transaction[0].notes.map((i) => ({
+      ephemeralKey: i.ephemeral_key,
+      encryptedNote: i.encrypted_note,
+    }));
 
     // =============================
     // logs
@@ -153,6 +206,7 @@ export const useTransactionDetails = () => {
 
   return {
     state,
+    decryptNotes,
     onMessageFilterCallback,
     toggleMessageDisplay,
     filterMessages,
