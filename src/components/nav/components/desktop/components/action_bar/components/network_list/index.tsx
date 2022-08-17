@@ -1,6 +1,5 @@
 import React from 'react';
 import classnames from 'classnames';
-import { Box } from '@material-ui/core';
 import BigDipperLogoWhite from '@assets/big-dipper-white.svg';
 import BigDipperLogoRed from '@assets/big-dipper-red.svg';
 import { Networks } from '@src/components/nav/components';
@@ -18,23 +17,16 @@ const NetworkList: React.FC<{
   const theme = useRecoilValue(readTheme);
 
   return (
-    <Box
-      boxShadow={3}
-      className={classnames(className, classes.root)}
-    >
+    <div className={classnames(className, classes.root)}>
       <div
         style={{
           height: actionHeight,
         }}
       >
-        {theme === 'light' ? (
-          <BigDipperLogoRed />
-        ) : (
-          <BigDipperLogoWhite />
-        )}
+        {theme === 'light' ? <BigDipperLogoRed /> : <BigDipperLogoWhite />}
       </div>
       <Networks className={classes.content} />
-    </Box>
+    </div>
   );
 };
 

@@ -4,7 +4,7 @@ import { useScreenSize } from '@hooks';
 import { Mobile } from './components';
 import { useStyles } from './styles';
 
-const Desktop = dynamic(() => import('./components/desktop'));
+const Desktop: any = dynamic(() => import('./components/desktop'));
 
 const Nav:React.FC<{
   title?: string;

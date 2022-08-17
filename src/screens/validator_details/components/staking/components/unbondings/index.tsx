@@ -62,6 +62,7 @@ const Unbondings: React.FC<{
         page={page}
         handleChangePage={handleChangePage}
         handleChangeRowsPerPage={handleChangeRowsPerPage}
+        rowsPerPageOptions={undefined}
       />
     </div>
   );

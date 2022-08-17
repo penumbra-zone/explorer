@@ -1,3 +1,4 @@
+/* eslint-disable implicit-arrow-linebreak */
 import React from 'react';
 import useTranslation from 'next-translate/useTranslation';
 import classnames from 'classnames';
@@ -5,16 +6,7 @@ import { TablePagination } from '@material-ui/core';
 import { Actions } from './components';
 import { useStyles } from './styles';
 
-const Pagination: React.FC<{
-  className?: string;
-  total: number;
-  rowsPerPage: number;
-  rowsPerPageOptions?: number[];
-  page: number;
-  handleChangePage: (_event: React.MouseEvent<HTMLButtonElement, MouseEvent> | null,
-    selectedRowsPerPage: number) => void;
-  handleChangeRowsPerPage: (page: number) => void;
-}> = ({
+const Pagination = ({
   className,
   total,
   rowsPerPage,
@@ -37,13 +29,15 @@ const Pagination: React.FC<{
       className={classnames(className, classes.root)}
       rowsPerPageOptions={[]}
       labelRowsPerPage=""
-      labelDisplayedRows={({
-        from, to, count,
-      }) => t('paginationLabelOne', {
-        from,
-        to,
-        count,
-      })}
+      // eslint-disable-next-line object-curly-newline
+      labelDisplayedRows={({ from, to, count }) =>
+        t('paginationLabelOne', {
+          from,
+          to,
+          count,
+        })
+      // eslint-disable-next-line react/jsx-curly-newline
+      }
       colSpan={6}
       component="div"
       count={total}
@@ -55,7 +49,6 @@ const Pagination: React.FC<{
           rowsPerPageOptions,
           handleChangeRowsPerPage,
         };
-
         return (
           <>
             <Actions

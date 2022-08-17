@@ -9,15 +9,12 @@ import {
 } from '@material-ui/core';
 
 const ParamsChange: React.FC<{
-  className?: string;
   changes: {
     subspace: string;
     key: string;
     value: string;
   }[];
-}> = ({
-  changes,
-}) => {
+}> = ({ changes }) => {
   const { t } = useTranslation('proposals');
   return (
     <div style={{ overflow: 'auto' }}>

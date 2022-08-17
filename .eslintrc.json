@@ -136,6 +136,7 @@
         "consistent": true,
         "minProperties": 2
       }
-    ]
+    ],
+    "react/require-default-props": "warn"
   }
 }
