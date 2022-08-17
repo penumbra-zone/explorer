@@ -6,7 +6,7 @@ import {
 } from '@components';
 import { useStyles } from './styles';
 import {
-  Overview, Messages, Logs,
+  Overview, Messages, Logs, DecryptNotes,
 } from './components';
 import { useTransactionDetails } from './hooks';
 
@@ -23,7 +23,6 @@ const TransactionDetails = () => {
   const {
     overview, logs, messages,
   } = state;
-  console.log({ decryptNotes });
 
   return (
     <>
@@ -37,6 +36,9 @@ const TransactionDetails = () => {
         <LoadAndExist loading={state.loading} exists={state.exists}>
           <span className={classes.root}>
             <Overview data={overview} />
+            {!!decryptNotes.length && (
+              <DecryptNotes decryptNotes={decryptNotes} />
+            )}
             <Messages
               className={classes.messages}
               messages={filterMessages(messages.items)}
