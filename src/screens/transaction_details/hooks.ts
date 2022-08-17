@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 import {
   useState, useEffect,
 } from 'react';
@@ -62,8 +63,9 @@ export const useTransactionDetails = () => {
   // ===============================
   useEffect(() => {
     const fvk = localStorage.getItem('fvk');
+
     if (!state.notes.length || !fvk) return;
-    const arr = [];
+
     const getDecrypto = async (i: number) => {
       const item = state.notes[i];
 
@@ -74,24 +76,25 @@ export const useTransactionDetails = () => {
           // eslint-disable-next-line comma-dangle
           item.ephemeralKey
         );
-        arr.push({
-          diversifier: decryptNote.diversifier,
-          noteBlinding: decryptNote.note_blinding,
-          transmissionKey: decryptNote.transmission_key,
-          value: {
-            amount: decryptNote.value.amount,
-            assetId: decryptNote.value.asset_id,
+        setDecryptNote((state) => [
+          ...state,
+          {
+            diversifier: decryptNote.diversifier,
+            noteBlinding: decryptNote.note_blinding,
+            transmissionKey: decryptNote.transmission_key,
+            value: {
+              amount: decryptNote.value.amount,
+              assetId: decryptNote.value.asset_id,
+            },
           },
-        });
-      } catch (e) {
-        setDecryptNote([]);
-      }
+        ]);
+        // eslint-disable-next-line no-empty
+      } catch (e) {}
     };
     // eslint-disable-next-line no-plusplus
     for (let i = 0; i < state.notes.length; i++) {
       getDecrypto(i);
     }
-    setDecryptNote(arr);
   }, [state.notes]);
 
   // ===============================

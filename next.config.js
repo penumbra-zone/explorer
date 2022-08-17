@@ -18,7 +18,7 @@ module.exports = nextTranslate({
         './../server/static/wasm/[modulehash].wasm';
     } else {
       config.output.webassemblyModuleFilename =
-        'server/static/wasm/[modulehash].wasm';
+        'static/wasm/[modulehash].wasm';
     }
     return config;
   },
