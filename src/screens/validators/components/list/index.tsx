@@ -14,8 +14,8 @@ import { Tabs } from './components';
 import { useStyles } from './styles';
 import { useValidators } from './hooks';
 
-const Desktop = dynamic(() => import('./components/desktop'));
-const Mobile = dynamic(() => import('./components/mobile'));
+const Desktop: any = dynamic(() => import('./components/desktop'));
+const Mobile: any = dynamic(() => import('./components/mobile'));
 
 const List: React.FC<{
   className?: string;

@@ -1,46 +1,37 @@
+/* eslint-disable object-curly-newline */
 import React from 'react';
 import * as R from 'ramda';
 import classnames from 'classnames';
 import dynamic from 'next/dynamic';
-import {
-  usePagination,
-  useScreenSize,
-} from '@hooks';
-import {
-  Pagination,
-  NoData,
-  Loading,
-} from '@components';
-import {
-  useProfilesRecoil,
-} from '@recoil/profiles';
+import { usePagination, useScreenSize } from '@hooks';
+import { Pagination, NoData, Loading } from '@components';
+import { useProfilesRecoil } from '@recoil/profiles';
 import { useStyles } from './styles';
 import { DelegationsType } from '../../types';
 
 const Desktop = dynamic(() => import('./components/desktop'));
 const Mobile = dynamic(() => import('./components/mobile'));
 
-const Delegations: React.FC<{
-  delegations: DelegationsType,
-} & ComponentDefault> = (props) => {
+const Delegations: React.FC<
+  {
+    delegations: DelegationsType;
+  } & ComponentDefault
+> = (props) => {
   const { isDesktop } = useScreenSize();
   const classes = useStyles();
-  const {
-    page,
-    rowsPerPage,
-    handleChangePage,
-    handleChangeRowsPerPage,
-  } = usePagination({});
+  // eslint-disable-next-line operator-linebreak
+  const { page, rowsPerPage, handleChangePage, handleChangeRowsPerPage } =
+    usePagination({});
 
   const pageItems = R.pathOr([], ['delegations', 'data', page], props);
 
   const dataProfiles = useProfilesRecoil(pageItems.map((x) => x.validator));
 
   const mergedDataWithProfiles = pageItems.map((x, i) => {
-    return ({
+    return {
       ...x,
       validator: dataProfiles[i],
-    });
+    };
   });
 
   const items = mergedDataWithProfiles;
@@ -67,6 +58,7 @@ const Delegations: React.FC<{
         page={page}
         handleChangePage={handleChangePage}
         handleChangeRowsPerPage={handleChangeRowsPerPage}
+        rowsPerPageOptions={undefined}
       />
     </div>
   );

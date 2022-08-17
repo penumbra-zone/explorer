@@ -16,8 +16,8 @@ import {
 } from '@hooks';
 import { useStyles } from './styles';
 
-const Desktop = dynamic(() => import('./components/desktop'));
-const Mobile = dynamic(() => import('./components/mobile'));
+const Desktop: any = dynamic(() => import('./components/desktop'));
+const Mobile: any = dynamic(() => import('./components/mobile'));
 
 const Connections: React.FC<{
   handleClose: () => void;

@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { MockTheme } from '@tests/utils';
@@ -23,8 +24,10 @@ describe('components: Pagination', () => {
           handleChangeRowsPerPage={jest.fn()}
           page={0}
           rowsPerPage={5}
+          className={undefined}
+          rowsPerPageOptions={undefined}
         />
-      </MockTheme>,
+      </MockTheme>
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
