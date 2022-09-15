@@ -7491,10 +7491,10 @@
   "resolved" "https://registry.npmjs.org/path-type/-/path-type-4.0.0.tgz"
   "version" "4.0.0"
 
-"penumbra-web-assembly@0.1.9":
-  "integrity" "sha512-4Rf7mGa9ixKj9qrCtxeP3bUYp9fKFBVzfpC4p2fF4o6jrNksEeFHmb7QX5BJNegd74FgE1LW4q7eopv1Y9Kc6w=="
-  "resolved" "https://registry.npmjs.org/penumbra-web-assembly/-/penumbra-web-assembly-0.1.9.tgz"
-  "version" "0.1.9"
+"penumbra-web-assembly@0.0.29-eukelade":
+  "integrity" "sha512-OhekytTxmlTbSIgF7U4YshNGV+tU8rW7cTMxX/mCBPcfYBOfW1323xK3KmQigHG5FxOhNJsLVMzPY9kI41ix9w=="
+  "resolved" "https://registry.npmjs.org/penumbra-web-assembly/-/penumbra-web-assembly-0.0.29-eukelade.tgz"
+  "version" "0.0.29-eukelade"
 
 "picocolors@^1.0.0":
   "integrity" "sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ=="
