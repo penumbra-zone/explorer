@@ -41,7 +41,7 @@
     "next-seo": "^4.26.0",
     "next-translate": "^1.0.3",
     "numeral": "2.0.4",
-    "penumbra-web-assembly": "0.1.7",
+    "penumbra-web-assembly": "0.0.29-eukelade",
     "qrcode.react": "^1.0.1",
     "ramda": "^0.27.1",
     "react": "^17.0.2",
