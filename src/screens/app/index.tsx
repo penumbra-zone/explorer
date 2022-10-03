@@ -28,8 +28,8 @@ function App(props: AppProps) {
   return (
     <>
       <DefaultSeo
-        titleTemplate={`%s | ${chainConfig.title}`}
-        title={t('common:bigDipper')}
+        titleTemplate={`${chainConfig.title}`}
+        title={chainConfig.title}
         description={t('common:description')}
         openGraph={{
           title: `${t('common:bigDipper')} | ${chainConfig.title}`,
@@ -41,9 +41,7 @@ function App(props: AppProps) {
         additionalLinkTags={ADDITIONAL_LINK_TAGS_SEO}
         additionalMetaTags={ADDITIONAL_META_TAGS}
       />
-      <ApolloProvider
-        client={apolloClient}
-      >
+      <ApolloProvider client={apolloClient}>
         <RecoilRoot>
           <Main {...props} />
         </RecoilRoot>
