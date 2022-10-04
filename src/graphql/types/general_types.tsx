@@ -1426,6 +1426,294 @@ export type Community_Pool_Variance_Fields = {
   height?: Maybe<Scalars['Float']>;
 };
 
+/** columns and relationships of "cpmm_reserve" */
+export type Cpmm_Reserve = {
+  __typename?: 'cpmm_reserve';
+  /** An object relationship */
+  block: Block;
+  height: Scalars['bigint'];
+  id: Scalars['Int'];
+  r1?: Maybe<Scalars['Int']>;
+  r2?: Maybe<Scalars['Int']>;
+  /** An object relationship */
+  trading_pair: Trading_Pair;
+  trading_pair_id: Scalars['Int'];
+};
+
+/** aggregated selection of "cpmm_reserve" */
+export type Cpmm_Reserve_Aggregate = {
+  __typename?: 'cpmm_reserve_aggregate';
+  aggregate?: Maybe<Cpmm_Reserve_Aggregate_Fields>;
+  nodes: Array<Cpmm_Reserve>;
+};
+
+/** aggregate fields of "cpmm_reserve" */
+export type Cpmm_Reserve_Aggregate_Fields = {
+  __typename?: 'cpmm_reserve_aggregate_fields';
+  avg?: Maybe<Cpmm_Reserve_Avg_Fields>;
+  count: Scalars['Int'];
+  max?: Maybe<Cpmm_Reserve_Max_Fields>;
+  min?: Maybe<Cpmm_Reserve_Min_Fields>;
+  stddev?: Maybe<Cpmm_Reserve_Stddev_Fields>;
+  stddev_pop?: Maybe<Cpmm_Reserve_Stddev_Pop_Fields>;
+  stddev_samp?: Maybe<Cpmm_Reserve_Stddev_Samp_Fields>;
+  sum?: Maybe<Cpmm_Reserve_Sum_Fields>;
+  var_pop?: Maybe<Cpmm_Reserve_Var_Pop_Fields>;
+  var_samp?: Maybe<Cpmm_Reserve_Var_Samp_Fields>;
+  variance?: Maybe<Cpmm_Reserve_Variance_Fields>;
+};
+
+
+/** aggregate fields of "cpmm_reserve" */
+export type Cpmm_Reserve_Aggregate_FieldsCountArgs = {
+  columns?: Maybe<Array<Cpmm_Reserve_Select_Column>>;
+  distinct?: Maybe<Scalars['Boolean']>;
+};
+
+/** order by aggregate values of table "cpmm_reserve" */
+export type Cpmm_Reserve_Aggregate_Order_By = {
+  avg?: Maybe<Cpmm_Reserve_Avg_Order_By>;
+  count?: Maybe<Order_By>;
+  max?: Maybe<Cpmm_Reserve_Max_Order_By>;
+  min?: Maybe<Cpmm_Reserve_Min_Order_By>;
+  stddev?: Maybe<Cpmm_Reserve_Stddev_Order_By>;
+  stddev_pop?: Maybe<Cpmm_Reserve_Stddev_Pop_Order_By>;
+  stddev_samp?: Maybe<Cpmm_Reserve_Stddev_Samp_Order_By>;
+  sum?: Maybe<Cpmm_Reserve_Sum_Order_By>;
+  var_pop?: Maybe<Cpmm_Reserve_Var_Pop_Order_By>;
+  var_samp?: Maybe<Cpmm_Reserve_Var_Samp_Order_By>;
+  variance?: Maybe<Cpmm_Reserve_Variance_Order_By>;
+};
+
+/** aggregate avg on columns */
+export type Cpmm_Reserve_Avg_Fields = {
+  __typename?: 'cpmm_reserve_avg_fields';
+  height?: Maybe<Scalars['Float']>;
+  id?: Maybe<Scalars['Float']>;
+  r1?: Maybe<Scalars['Float']>;
+  r2?: Maybe<Scalars['Float']>;
+  trading_pair_id?: Maybe<Scalars['Float']>;
+};
+
+/** order by avg() on columns of table "cpmm_reserve" */
+export type Cpmm_Reserve_Avg_Order_By = {
+  height?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  r1?: Maybe<Order_By>;
+  r2?: Maybe<Order_By>;
+  trading_pair_id?: Maybe<Order_By>;
+};
+
+/** Boolean expression to filter rows from the table "cpmm_reserve". All fields are combined with a logical 'AND'. */
+export type Cpmm_Reserve_Bool_Exp = {
+  _and?: Maybe<Array<Cpmm_Reserve_Bool_Exp>>;
+  _not?: Maybe<Cpmm_Reserve_Bool_Exp>;
+  _or?: Maybe<Array<Cpmm_Reserve_Bool_Exp>>;
+  block?: Maybe<Block_Bool_Exp>;
+  height?: Maybe<Bigint_Comparison_Exp>;
+  id?: Maybe<Int_Comparison_Exp>;
+  r1?: Maybe<Int_Comparison_Exp>;
+  r2?: Maybe<Int_Comparison_Exp>;
+  trading_pair?: Maybe<Trading_Pair_Bool_Exp>;
+  trading_pair_id?: Maybe<Int_Comparison_Exp>;
+};
+
+/** aggregate max on columns */
+export type Cpmm_Reserve_Max_Fields = {
+  __typename?: 'cpmm_reserve_max_fields';
+  height?: Maybe<Scalars['bigint']>;
+  id?: Maybe<Scalars['Int']>;
+  r1?: Maybe<Scalars['Int']>;
+  r2?: Maybe<Scalars['Int']>;
+  trading_pair_id?: Maybe<Scalars['Int']>;
+};
+
+/** order by max() on columns of table "cpmm_reserve" */
+export type Cpmm_Reserve_Max_Order_By = {
+  height?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  r1?: Maybe<Order_By>;
+  r2?: Maybe<Order_By>;
+  trading_pair_id?: Maybe<Order_By>;
+};
+
+/** aggregate min on columns */
+export type Cpmm_Reserve_Min_Fields = {
+  __typename?: 'cpmm_reserve_min_fields';
+  height?: Maybe<Scalars['bigint']>;
+  id?: Maybe<Scalars['Int']>;
+  r1?: Maybe<Scalars['Int']>;
+  r2?: Maybe<Scalars['Int']>;
+  trading_pair_id?: Maybe<Scalars['Int']>;
+};
+
+/** order by min() on columns of table "cpmm_reserve" */
+export type Cpmm_Reserve_Min_Order_By = {
+  height?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  r1?: Maybe<Order_By>;
+  r2?: Maybe<Order_By>;
+  trading_pair_id?: Maybe<Order_By>;
+};
+
+/** Ordering options when selecting data from "cpmm_reserve". */
+export type Cpmm_Reserve_Order_By = {
+  block?: Maybe<Block_Order_By>;
+  height?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  r1?: Maybe<Order_By>;
+  r2?: Maybe<Order_By>;
+  trading_pair?: Maybe<Trading_Pair_Order_By>;
+  trading_pair_id?: Maybe<Order_By>;
+};
+
+/** select columns of table "cpmm_reserve" */
+export enum Cpmm_Reserve_Select_Column {
+  /** column name */
+  Height = 'height',
+  /** column name */
+  Id = 'id',
+  /** column name */
+  R1 = 'r1',
+  /** column name */
+  R2 = 'r2',
+  /** column name */
+  TradingPairId = 'trading_pair_id'
+}
+
+/** aggregate stddev on columns */
+export type Cpmm_Reserve_Stddev_Fields = {
+  __typename?: 'cpmm_reserve_stddev_fields';
+  height?: Maybe<Scalars['Float']>;
+  id?: Maybe<Scalars['Float']>;
+  r1?: Maybe<Scalars['Float']>;
+  r2?: Maybe<Scalars['Float']>;
+  trading_pair_id?: Maybe<Scalars['Float']>;
+};
+
+/** order by stddev() on columns of table "cpmm_reserve" */
+export type Cpmm_Reserve_Stddev_Order_By = {
+  height?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  r1?: Maybe<Order_By>;
+  r2?: Maybe<Order_By>;
+  trading_pair_id?: Maybe<Order_By>;
+};
+
+/** aggregate stddev_pop on columns */
+export type Cpmm_Reserve_Stddev_Pop_Fields = {
+  __typename?: 'cpmm_reserve_stddev_pop_fields';
+  height?: Maybe<Scalars['Float']>;
+  id?: Maybe<Scalars['Float']>;
+  r1?: Maybe<Scalars['Float']>;
+  r2?: Maybe<Scalars['Float']>;
+  trading_pair_id?: Maybe<Scalars['Float']>;
+};
+
+/** order by stddev_pop() on columns of table "cpmm_reserve" */
+export type Cpmm_Reserve_Stddev_Pop_Order_By = {
+  height?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  r1?: Maybe<Order_By>;
+  r2?: Maybe<Order_By>;
+  trading_pair_id?: Maybe<Order_By>;
+};
+
+/** aggregate stddev_samp on columns */
+export type Cpmm_Reserve_Stddev_Samp_Fields = {
+  __typename?: 'cpmm_reserve_stddev_samp_fields';
+  height?: Maybe<Scalars['Float']>;
+  id?: Maybe<Scalars['Float']>;
+  r1?: Maybe<Scalars['Float']>;
+  r2?: Maybe<Scalars['Float']>;
+  trading_pair_id?: Maybe<Scalars['Float']>;
+};
+
+/** order by stddev_samp() on columns of table "cpmm_reserve" */
+export type Cpmm_Reserve_Stddev_Samp_Order_By = {
+  height?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  r1?: Maybe<Order_By>;
+  r2?: Maybe<Order_By>;
+  trading_pair_id?: Maybe<Order_By>;
+};
+
+/** aggregate sum on columns */
+export type Cpmm_Reserve_Sum_Fields = {
+  __typename?: 'cpmm_reserve_sum_fields';
+  height?: Maybe<Scalars['bigint']>;
+  id?: Maybe<Scalars['Int']>;
+  r1?: Maybe<Scalars['Int']>;
+  r2?: Maybe<Scalars['Int']>;
+  trading_pair_id?: Maybe<Scalars['Int']>;
+};
+
+/** order by sum() on columns of table "cpmm_reserve" */
+export type Cpmm_Reserve_Sum_Order_By = {
+  height?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  r1?: Maybe<Order_By>;
+  r2?: Maybe<Order_By>;
+  trading_pair_id?: Maybe<Order_By>;
+};
+
+/** aggregate var_pop on columns */
+export type Cpmm_Reserve_Var_Pop_Fields = {
+  __typename?: 'cpmm_reserve_var_pop_fields';
+  height?: Maybe<Scalars['Float']>;
+  id?: Maybe<Scalars['Float']>;
+  r1?: Maybe<Scalars['Float']>;
+  r2?: Maybe<Scalars['Float']>;
+  trading_pair_id?: Maybe<Scalars['Float']>;
+};
+
+/** order by var_pop() on columns of table "cpmm_reserve" */
+export type Cpmm_Reserve_Var_Pop_Order_By = {
+  height?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  r1?: Maybe<Order_By>;
+  r2?: Maybe<Order_By>;
+  trading_pair_id?: Maybe<Order_By>;
+};
+
+/** aggregate var_samp on columns */
+export type Cpmm_Reserve_Var_Samp_Fields = {
+  __typename?: 'cpmm_reserve_var_samp_fields';
+  height?: Maybe<Scalars['Float']>;
+  id?: Maybe<Scalars['Float']>;
+  r1?: Maybe<Scalars['Float']>;
+  r2?: Maybe<Scalars['Float']>;
+  trading_pair_id?: Maybe<Scalars['Float']>;
+};
+
+/** order by var_samp() on columns of table "cpmm_reserve" */
+export type Cpmm_Reserve_Var_Samp_Order_By = {
+  height?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  r1?: Maybe<Order_By>;
+  r2?: Maybe<Order_By>;
+  trading_pair_id?: Maybe<Order_By>;
+};
+
+/** aggregate variance on columns */
+export type Cpmm_Reserve_Variance_Fields = {
+  __typename?: 'cpmm_reserve_variance_fields';
+  height?: Maybe<Scalars['Float']>;
+  id?: Maybe<Scalars['Float']>;
+  r1?: Maybe<Scalars['Float']>;
+  r2?: Maybe<Scalars['Float']>;
+  trading_pair_id?: Maybe<Scalars['Float']>;
+};
+
+/** order by variance() on columns of table "cpmm_reserve" */
+export type Cpmm_Reserve_Variance_Order_By = {
+  height?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  r1?: Maybe<Order_By>;
+  r2?: Maybe<Order_By>;
+  trading_pair_id?: Maybe<Order_By>;
+};
+
 /** columns and relationships of "distribution_params" */
 export type Distribution_Params = {
   __typename?: 'distribution_params';
@@ -3685,8 +3973,8 @@ export type Proposal = {
   /** An aggregate relationship */
   proposal_votes_aggregate: Proposal_Vote_Aggregate;
   /** An object relationship */
-  proposer: Account;
-  proposer_address: Scalars['String'];
+  proposer?: Maybe<Account>;
+  proposer_address?: Maybe<Scalars['String']>;
   /** An object relationship */
   staking_pool_snapshot?: Maybe<Proposal_Staking_Pool_Snapshot>;
   status?: Maybe<Scalars['String']>;
@@ -5265,6 +5553,12 @@ export type Query_Root = {
   community_pool: Array<Community_Pool>;
   /** fetch aggregated fields from the table: "community_pool" */
   community_pool_aggregate: Community_Pool_Aggregate;
+  /** fetch data from the table: "cpmm_reserve" */
+  cpmm_reserve: Array<Cpmm_Reserve>;
+  /** fetch aggregated fields from the table: "cpmm_reserve" */
+  cpmm_reserve_aggregate: Cpmm_Reserve_Aggregate;
+  /** fetch data from the table: "cpmm_reserve" using primary key columns */
+  cpmm_reserve_by_pk?: Maybe<Cpmm_Reserve>;
   /** fetch data from the table: "distribution_params" */
   distribution_params: Array<Distribution_Params>;
   /** fetch aggregated fields from the table: "distribution_params" */
@@ -5383,6 +5677,12 @@ export type Query_Root = {
   supply: Array<Supply>;
   /** fetch aggregated fields from the table: "supply" */
   supply_aggregate: Supply_Aggregate;
+  /** An array relationship */
+  swap_output_data: Array<Swap_Output_Data>;
+  /** An aggregate relationship */
+  swap_output_data_aggregate: Swap_Output_Data_Aggregate;
+  /** fetch data from the table: "swap_output_data" using primary key columns */
+  swap_output_data_by_pk?: Maybe<Swap_Output_Data>;
   /** fetch data from the table: "token" */
   token: Array<Token>;
   /** fetch aggregated fields from the table: "token" */
@@ -5401,6 +5701,12 @@ export type Query_Root = {
   token_unit: Array<Token_Unit>;
   /** fetch aggregated fields from the table: "token_unit" */
   token_unit_aggregate: Token_Unit_Aggregate;
+  /** fetch data from the table: "trading_pair" */
+  trading_pair: Array<Trading_Pair>;
+  /** fetch aggregated fields from the table: "trading_pair" */
+  trading_pair_aggregate: Trading_Pair_Aggregate;
+  /** fetch data from the table: "trading_pair" using primary key columns */
+  trading_pair_by_pk?: Maybe<Trading_Pair>;
   /** fetch data from the table: "transaction" */
   transaction: Array<Transaction>;
   /** fetch aggregated fields from the table: "transaction" */
@@ -5679,6 +5985,29 @@ export type Query_RootCommunity_Pool_AggregateArgs = {
   offset?: Maybe<Scalars['Int']>;
   order_by?: Maybe<Array<Community_Pool_Order_By>>;
   where?: Maybe<Community_Pool_Bool_Exp>;
+};
+
+
+export type Query_RootCpmm_ReserveArgs = {
+  distinct_on?: Maybe<Array<Cpmm_Reserve_Select_Column>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<Cpmm_Reserve_Order_By>>;
+  where?: Maybe<Cpmm_Reserve_Bool_Exp>;
+};
+
+
+export type Query_RootCpmm_Reserve_AggregateArgs = {
+  distinct_on?: Maybe<Array<Cpmm_Reserve_Select_Column>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<Cpmm_Reserve_Order_By>>;
+  where?: Maybe<Cpmm_Reserve_Bool_Exp>;
+};
+
+
+export type Query_RootCpmm_Reserve_By_PkArgs = {
+  id: Scalars['Int'];
 };
 
 
@@ -6163,6 +6492,29 @@ export type Query_RootSupply_AggregateArgs = {
 };
 
 
+export type Query_RootSwap_Output_DataArgs = {
+  distinct_on?: Maybe<Array<Swap_Output_Data_Select_Column>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<Swap_Output_Data_Order_By>>;
+  where?: Maybe<Swap_Output_Data_Bool_Exp>;
+};
+
+
+export type Query_RootSwap_Output_Data_AggregateArgs = {
+  distinct_on?: Maybe<Array<Swap_Output_Data_Select_Column>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<Swap_Output_Data_Order_By>>;
+  where?: Maybe<Swap_Output_Data_Bool_Exp>;
+};
+
+
+export type Query_RootSwap_Output_Data_By_PkArgs = {
+  id: Scalars['Int'];
+};
+
+
 export type Query_RootTokenArgs = {
   distinct_on?: Maybe<Array<Token_Select_Column>>;
   limit?: Maybe<Scalars['Int']>;
@@ -6237,6 +6589,29 @@ export type Query_RootToken_Unit_AggregateArgs = {
   offset?: Maybe<Scalars['Int']>;
   order_by?: Maybe<Array<Token_Unit_Order_By>>;
   where?: Maybe<Token_Unit_Bool_Exp>;
+};
+
+
+export type Query_RootTrading_PairArgs = {
+  distinct_on?: Maybe<Array<Trading_Pair_Select_Column>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<Trading_Pair_Order_By>>;
+  where?: Maybe<Trading_Pair_Bool_Exp>;
+};
+
+
+export type Query_RootTrading_Pair_AggregateArgs = {
+  distinct_on?: Maybe<Array<Trading_Pair_Select_Column>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<Trading_Pair_Order_By>>;
+  where?: Maybe<Trading_Pair_Bool_Exp>;
+};
+
+
+export type Query_RootTrading_Pair_By_PkArgs = {
+  id: Scalars['Int'];
 };
 
 
@@ -6903,6 +7278,12 @@ export type Subscription_Root = {
   community_pool: Array<Community_Pool>;
   /** fetch aggregated fields from the table: "community_pool" */
   community_pool_aggregate: Community_Pool_Aggregate;
+  /** fetch data from the table: "cpmm_reserve" */
+  cpmm_reserve: Array<Cpmm_Reserve>;
+  /** fetch aggregated fields from the table: "cpmm_reserve" */
+  cpmm_reserve_aggregate: Cpmm_Reserve_Aggregate;
+  /** fetch data from the table: "cpmm_reserve" using primary key columns */
+  cpmm_reserve_by_pk?: Maybe<Cpmm_Reserve>;
   /** fetch data from the table: "distribution_params" */
   distribution_params: Array<Distribution_Params>;
   /** fetch aggregated fields from the table: "distribution_params" */
@@ -7021,6 +7402,12 @@ export type Subscription_Root = {
   supply: Array<Supply>;
   /** fetch aggregated fields from the table: "supply" */
   supply_aggregate: Supply_Aggregate;
+  /** An array relationship */
+  swap_output_data: Array<Swap_Output_Data>;
+  /** An aggregate relationship */
+  swap_output_data_aggregate: Swap_Output_Data_Aggregate;
+  /** fetch data from the table: "swap_output_data" using primary key columns */
+  swap_output_data_by_pk?: Maybe<Swap_Output_Data>;
   /** fetch data from the table: "token" */
   token: Array<Token>;
   /** fetch aggregated fields from the table: "token" */
@@ -7039,6 +7426,12 @@ export type Subscription_Root = {
   token_unit: Array<Token_Unit>;
   /** fetch aggregated fields from the table: "token_unit" */
   token_unit_aggregate: Token_Unit_Aggregate;
+  /** fetch data from the table: "trading_pair" */
+  trading_pair: Array<Trading_Pair>;
+  /** fetch aggregated fields from the table: "trading_pair" */
+  trading_pair_aggregate: Trading_Pair_Aggregate;
+  /** fetch data from the table: "trading_pair" using primary key columns */
+  trading_pair_by_pk?: Maybe<Trading_Pair>;
   /** fetch data from the table: "transaction" */
   transaction: Array<Transaction>;
   /** fetch aggregated fields from the table: "transaction" */
@@ -7231,6 +7624,29 @@ export type Subscription_RootCommunity_Pool_AggregateArgs = {
   offset?: Maybe<Scalars['Int']>;
   order_by?: Maybe<Array<Community_Pool_Order_By>>;
   where?: Maybe<Community_Pool_Bool_Exp>;
+};
+
+
+export type Subscription_RootCpmm_ReserveArgs = {
+  distinct_on?: Maybe<Array<Cpmm_Reserve_Select_Column>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<Cpmm_Reserve_Order_By>>;
+  where?: Maybe<Cpmm_Reserve_Bool_Exp>;
+};
+
+
+export type Subscription_RootCpmm_Reserve_AggregateArgs = {
+  distinct_on?: Maybe<Array<Cpmm_Reserve_Select_Column>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<Cpmm_Reserve_Order_By>>;
+  where?: Maybe<Cpmm_Reserve_Bool_Exp>;
+};
+
+
+export type Subscription_RootCpmm_Reserve_By_PkArgs = {
+  id: Scalars['Int'];
 };
 
 
@@ -7715,6 +8131,29 @@ export type Subscription_RootSupply_AggregateArgs = {
 };
 
 
+export type Subscription_RootSwap_Output_DataArgs = {
+  distinct_on?: Maybe<Array<Swap_Output_Data_Select_Column>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<Swap_Output_Data_Order_By>>;
+  where?: Maybe<Swap_Output_Data_Bool_Exp>;
+};
+
+
+export type Subscription_RootSwap_Output_Data_AggregateArgs = {
+  distinct_on?: Maybe<Array<Swap_Output_Data_Select_Column>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<Swap_Output_Data_Order_By>>;
+  where?: Maybe<Swap_Output_Data_Bool_Exp>;
+};
+
+
+export type Subscription_RootSwap_Output_Data_By_PkArgs = {
+  id: Scalars['Int'];
+};
+
+
 export type Subscription_RootTokenArgs = {
   distinct_on?: Maybe<Array<Token_Select_Column>>;
   limit?: Maybe<Scalars['Int']>;
@@ -7789,6 +8228,29 @@ export type Subscription_RootToken_Unit_AggregateArgs = {
   offset?: Maybe<Scalars['Int']>;
   order_by?: Maybe<Array<Token_Unit_Order_By>>;
   where?: Maybe<Token_Unit_Bool_Exp>;
+};
+
+
+export type Subscription_RootTrading_PairArgs = {
+  distinct_on?: Maybe<Array<Trading_Pair_Select_Column>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<Trading_Pair_Order_By>>;
+  where?: Maybe<Trading_Pair_Bool_Exp>;
+};
+
+
+export type Subscription_RootTrading_Pair_AggregateArgs = {
+  distinct_on?: Maybe<Array<Trading_Pair_Select_Column>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<Trading_Pair_Order_By>>;
+  where?: Maybe<Trading_Pair_Bool_Exp>;
+};
+
+
+export type Subscription_RootTrading_Pair_By_PkArgs = {
+  id: Scalars['Int'];
 };
 
 
@@ -8129,6 +8591,349 @@ export type Supply_Var_Samp_Fields = {
 export type Supply_Variance_Fields = {
   __typename?: 'supply_variance_fields';
   height?: Maybe<Scalars['Float']>;
+};
+
+/** columns and relationships of "swap_output_data" */
+export type Swap_Output_Data = {
+  __typename?: 'swap_output_data';
+  /** An object relationship */
+  block: Block;
+  delta_1?: Maybe<Scalars['Int']>;
+  delta_2?: Maybe<Scalars['Int']>;
+  height: Scalars['bigint'];
+  id: Scalars['Int'];
+  lambda_1?: Maybe<Scalars['Int']>;
+  lambda_2?: Maybe<Scalars['Int']>;
+  success?: Maybe<Scalars['Boolean']>;
+  /** An object relationship */
+  trading_pair: Trading_Pair;
+  trading_pair_id: Scalars['Int'];
+};
+
+/** aggregated selection of "swap_output_data" */
+export type Swap_Output_Data_Aggregate = {
+  __typename?: 'swap_output_data_aggregate';
+  aggregate?: Maybe<Swap_Output_Data_Aggregate_Fields>;
+  nodes: Array<Swap_Output_Data>;
+};
+
+/** aggregate fields of "swap_output_data" */
+export type Swap_Output_Data_Aggregate_Fields = {
+  __typename?: 'swap_output_data_aggregate_fields';
+  avg?: Maybe<Swap_Output_Data_Avg_Fields>;
+  count: Scalars['Int'];
+  max?: Maybe<Swap_Output_Data_Max_Fields>;
+  min?: Maybe<Swap_Output_Data_Min_Fields>;
+  stddev?: Maybe<Swap_Output_Data_Stddev_Fields>;
+  stddev_pop?: Maybe<Swap_Output_Data_Stddev_Pop_Fields>;
+  stddev_samp?: Maybe<Swap_Output_Data_Stddev_Samp_Fields>;
+  sum?: Maybe<Swap_Output_Data_Sum_Fields>;
+  var_pop?: Maybe<Swap_Output_Data_Var_Pop_Fields>;
+  var_samp?: Maybe<Swap_Output_Data_Var_Samp_Fields>;
+  variance?: Maybe<Swap_Output_Data_Variance_Fields>;
+};
+
+
+/** aggregate fields of "swap_output_data" */
+export type Swap_Output_Data_Aggregate_FieldsCountArgs = {
+  columns?: Maybe<Array<Swap_Output_Data_Select_Column>>;
+  distinct?: Maybe<Scalars['Boolean']>;
+};
+
+/** order by aggregate values of table "swap_output_data" */
+export type Swap_Output_Data_Aggregate_Order_By = {
+  avg?: Maybe<Swap_Output_Data_Avg_Order_By>;
+  count?: Maybe<Order_By>;
+  max?: Maybe<Swap_Output_Data_Max_Order_By>;
+  min?: Maybe<Swap_Output_Data_Min_Order_By>;
+  stddev?: Maybe<Swap_Output_Data_Stddev_Order_By>;
+  stddev_pop?: Maybe<Swap_Output_Data_Stddev_Pop_Order_By>;
+  stddev_samp?: Maybe<Swap_Output_Data_Stddev_Samp_Order_By>;
+  sum?: Maybe<Swap_Output_Data_Sum_Order_By>;
+  var_pop?: Maybe<Swap_Output_Data_Var_Pop_Order_By>;
+  var_samp?: Maybe<Swap_Output_Data_Var_Samp_Order_By>;
+  variance?: Maybe<Swap_Output_Data_Variance_Order_By>;
+};
+
+/** aggregate avg on columns */
+export type Swap_Output_Data_Avg_Fields = {
+  __typename?: 'swap_output_data_avg_fields';
+  delta_1?: Maybe<Scalars['Float']>;
+  delta_2?: Maybe<Scalars['Float']>;
+  height?: Maybe<Scalars['Float']>;
+  id?: Maybe<Scalars['Float']>;
+  lambda_1?: Maybe<Scalars['Float']>;
+  lambda_2?: Maybe<Scalars['Float']>;
+  trading_pair_id?: Maybe<Scalars['Float']>;
+};
+
+/** order by avg() on columns of table "swap_output_data" */
+export type Swap_Output_Data_Avg_Order_By = {
+  delta_1?: Maybe<Order_By>;
+  delta_2?: Maybe<Order_By>;
+  height?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  lambda_1?: Maybe<Order_By>;
+  lambda_2?: Maybe<Order_By>;
+  trading_pair_id?: Maybe<Order_By>;
+};
+
+/** Boolean expression to filter rows from the table "swap_output_data". All fields are combined with a logical 'AND'. */
+export type Swap_Output_Data_Bool_Exp = {
+  _and?: Maybe<Array<Swap_Output_Data_Bool_Exp>>;
+  _not?: Maybe<Swap_Output_Data_Bool_Exp>;
+  _or?: Maybe<Array<Swap_Output_Data_Bool_Exp>>;
+  block?: Maybe<Block_Bool_Exp>;
+  delta_1?: Maybe<Int_Comparison_Exp>;
+  delta_2?: Maybe<Int_Comparison_Exp>;
+  height?: Maybe<Bigint_Comparison_Exp>;
+  id?: Maybe<Int_Comparison_Exp>;
+  lambda_1?: Maybe<Int_Comparison_Exp>;
+  lambda_2?: Maybe<Int_Comparison_Exp>;
+  success?: Maybe<Boolean_Comparison_Exp>;
+  trading_pair?: Maybe<Trading_Pair_Bool_Exp>;
+  trading_pair_id?: Maybe<Int_Comparison_Exp>;
+};
+
+/** aggregate max on columns */
+export type Swap_Output_Data_Max_Fields = {
+  __typename?: 'swap_output_data_max_fields';
+  delta_1?: Maybe<Scalars['Int']>;
+  delta_2?: Maybe<Scalars['Int']>;
+  height?: Maybe<Scalars['bigint']>;
+  id?: Maybe<Scalars['Int']>;
+  lambda_1?: Maybe<Scalars['Int']>;
+  lambda_2?: Maybe<Scalars['Int']>;
+  trading_pair_id?: Maybe<Scalars['Int']>;
+};
+
+/** order by max() on columns of table "swap_output_data" */
+export type Swap_Output_Data_Max_Order_By = {
+  delta_1?: Maybe<Order_By>;
+  delta_2?: Maybe<Order_By>;
+  height?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  lambda_1?: Maybe<Order_By>;
+  lambda_2?: Maybe<Order_By>;
+  trading_pair_id?: Maybe<Order_By>;
+};
+
+/** aggregate min on columns */
+export type Swap_Output_Data_Min_Fields = {
+  __typename?: 'swap_output_data_min_fields';
+  delta_1?: Maybe<Scalars['Int']>;
+  delta_2?: Maybe<Scalars['Int']>;
+  height?: Maybe<Scalars['bigint']>;
+  id?: Maybe<Scalars['Int']>;
+  lambda_1?: Maybe<Scalars['Int']>;
+  lambda_2?: Maybe<Scalars['Int']>;
+  trading_pair_id?: Maybe<Scalars['Int']>;
+};
+
+/** order by min() on columns of table "swap_output_data" */
+export type Swap_Output_Data_Min_Order_By = {
+  delta_1?: Maybe<Order_By>;
+  delta_2?: Maybe<Order_By>;
+  height?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  lambda_1?: Maybe<Order_By>;
+  lambda_2?: Maybe<Order_By>;
+  trading_pair_id?: Maybe<Order_By>;
+};
+
+/** Ordering options when selecting data from "swap_output_data". */
+export type Swap_Output_Data_Order_By = {
+  block?: Maybe<Block_Order_By>;
+  delta_1?: Maybe<Order_By>;
+  delta_2?: Maybe<Order_By>;
+  height?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  lambda_1?: Maybe<Order_By>;
+  lambda_2?: Maybe<Order_By>;
+  success?: Maybe<Order_By>;
+  trading_pair?: Maybe<Trading_Pair_Order_By>;
+  trading_pair_id?: Maybe<Order_By>;
+};
+
+/** select columns of table "swap_output_data" */
+export enum Swap_Output_Data_Select_Column {
+  /** column name */
+  Delta_1 = 'delta_1',
+  /** column name */
+  Delta_2 = 'delta_2',
+  /** column name */
+  Height = 'height',
+  /** column name */
+  Id = 'id',
+  /** column name */
+  Lambda_1 = 'lambda_1',
+  /** column name */
+  Lambda_2 = 'lambda_2',
+  /** column name */
+  Success = 'success',
+  /** column name */
+  TradingPairId = 'trading_pair_id'
+}
+
+/** aggregate stddev on columns */
+export type Swap_Output_Data_Stddev_Fields = {
+  __typename?: 'swap_output_data_stddev_fields';
+  delta_1?: Maybe<Scalars['Float']>;
+  delta_2?: Maybe<Scalars['Float']>;
+  height?: Maybe<Scalars['Float']>;
+  id?: Maybe<Scalars['Float']>;
+  lambda_1?: Maybe<Scalars['Float']>;
+  lambda_2?: Maybe<Scalars['Float']>;
+  trading_pair_id?: Maybe<Scalars['Float']>;
+};
+
+/** order by stddev() on columns of table "swap_output_data" */
+export type Swap_Output_Data_Stddev_Order_By = {
+  delta_1?: Maybe<Order_By>;
+  delta_2?: Maybe<Order_By>;
+  height?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  lambda_1?: Maybe<Order_By>;
+  lambda_2?: Maybe<Order_By>;
+  trading_pair_id?: Maybe<Order_By>;
+};
+
+/** aggregate stddev_pop on columns */
+export type Swap_Output_Data_Stddev_Pop_Fields = {
+  __typename?: 'swap_output_data_stddev_pop_fields';
+  delta_1?: Maybe<Scalars['Float']>;
+  delta_2?: Maybe<Scalars['Float']>;
+  height?: Maybe<Scalars['Float']>;
+  id?: Maybe<Scalars['Float']>;
+  lambda_1?: Maybe<Scalars['Float']>;
+  lambda_2?: Maybe<Scalars['Float']>;
+  trading_pair_id?: Maybe<Scalars['Float']>;
+};
+
+/** order by stddev_pop() on columns of table "swap_output_data" */
+export type Swap_Output_Data_Stddev_Pop_Order_By = {
+  delta_1?: Maybe<Order_By>;
+  delta_2?: Maybe<Order_By>;
+  height?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  lambda_1?: Maybe<Order_By>;
+  lambda_2?: Maybe<Order_By>;
+  trading_pair_id?: Maybe<Order_By>;
+};
+
+/** aggregate stddev_samp on columns */
+export type Swap_Output_Data_Stddev_Samp_Fields = {
+  __typename?: 'swap_output_data_stddev_samp_fields';
+  delta_1?: Maybe<Scalars['Float']>;
+  delta_2?: Maybe<Scalars['Float']>;
+  height?: Maybe<Scalars['Float']>;
+  id?: Maybe<Scalars['Float']>;
+  lambda_1?: Maybe<Scalars['Float']>;
+  lambda_2?: Maybe<Scalars['Float']>;
+  trading_pair_id?: Maybe<Scalars['Float']>;
+};
+
+/** order by stddev_samp() on columns of table "swap_output_data" */
+export type Swap_Output_Data_Stddev_Samp_Order_By = {
+  delta_1?: Maybe<Order_By>;
+  delta_2?: Maybe<Order_By>;
+  height?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  lambda_1?: Maybe<Order_By>;
+  lambda_2?: Maybe<Order_By>;
+  trading_pair_id?: Maybe<Order_By>;
+};
+
+/** aggregate sum on columns */
+export type Swap_Output_Data_Sum_Fields = {
+  __typename?: 'swap_output_data_sum_fields';
+  delta_1?: Maybe<Scalars['Int']>;
+  delta_2?: Maybe<Scalars['Int']>;
+  height?: Maybe<Scalars['bigint']>;
+  id?: Maybe<Scalars['Int']>;
+  lambda_1?: Maybe<Scalars['Int']>;
+  lambda_2?: Maybe<Scalars['Int']>;
+  trading_pair_id?: Maybe<Scalars['Int']>;
+};
+
+/** order by sum() on columns of table "swap_output_data" */
+export type Swap_Output_Data_Sum_Order_By = {
+  delta_1?: Maybe<Order_By>;
+  delta_2?: Maybe<Order_By>;
+  height?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  lambda_1?: Maybe<Order_By>;
+  lambda_2?: Maybe<Order_By>;
+  trading_pair_id?: Maybe<Order_By>;
+};
+
+/** aggregate var_pop on columns */
+export type Swap_Output_Data_Var_Pop_Fields = {
+  __typename?: 'swap_output_data_var_pop_fields';
+  delta_1?: Maybe<Scalars['Float']>;
+  delta_2?: Maybe<Scalars['Float']>;
+  height?: Maybe<Scalars['Float']>;
+  id?: Maybe<Scalars['Float']>;
+  lambda_1?: Maybe<Scalars['Float']>;
+  lambda_2?: Maybe<Scalars['Float']>;
+  trading_pair_id?: Maybe<Scalars['Float']>;
+};
+
+/** order by var_pop() on columns of table "swap_output_data" */
+export type Swap_Output_Data_Var_Pop_Order_By = {
+  delta_1?: Maybe<Order_By>;
+  delta_2?: Maybe<Order_By>;
+  height?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  lambda_1?: Maybe<Order_By>;
+  lambda_2?: Maybe<Order_By>;
+  trading_pair_id?: Maybe<Order_By>;
+};
+
+/** aggregate var_samp on columns */
+export type Swap_Output_Data_Var_Samp_Fields = {
+  __typename?: 'swap_output_data_var_samp_fields';
+  delta_1?: Maybe<Scalars['Float']>;
+  delta_2?: Maybe<Scalars['Float']>;
+  height?: Maybe<Scalars['Float']>;
+  id?: Maybe<Scalars['Float']>;
+  lambda_1?: Maybe<Scalars['Float']>;
+  lambda_2?: Maybe<Scalars['Float']>;
+  trading_pair_id?: Maybe<Scalars['Float']>;
+};
+
+/** order by var_samp() on columns of table "swap_output_data" */
+export type Swap_Output_Data_Var_Samp_Order_By = {
+  delta_1?: Maybe<Order_By>;
+  delta_2?: Maybe<Order_By>;
+  height?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  lambda_1?: Maybe<Order_By>;
+  lambda_2?: Maybe<Order_By>;
+  trading_pair_id?: Maybe<Order_By>;
+};
+
+/** aggregate variance on columns */
+export type Swap_Output_Data_Variance_Fields = {
+  __typename?: 'swap_output_data_variance_fields';
+  delta_1?: Maybe<Scalars['Float']>;
+  delta_2?: Maybe<Scalars['Float']>;
+  height?: Maybe<Scalars['Float']>;
+  id?: Maybe<Scalars['Float']>;
+  lambda_1?: Maybe<Scalars['Float']>;
+  lambda_2?: Maybe<Scalars['Float']>;
+  trading_pair_id?: Maybe<Scalars['Float']>;
+};
+
+/** order by variance() on columns of table "swap_output_data" */
+export type Swap_Output_Data_Variance_Order_By = {
+  delta_1?: Maybe<Order_By>;
+  delta_2?: Maybe<Order_By>;
+  height?: Maybe<Order_By>;
+  id?: Maybe<Order_By>;
+  lambda_1?: Maybe<Order_By>;
+  lambda_2?: Maybe<Order_By>;
+  trading_pair_id?: Maybe<Order_By>;
 };
 
 
@@ -8984,6 +9789,195 @@ export type Token_Unit_Variance_Fields = {
 /** order by variance() on columns of table "token_unit" */
 export type Token_Unit_Variance_Order_By = {
   exponent?: Maybe<Order_By>;
+};
+
+/** columns and relationships of "trading_pair" */
+export type Trading_Pair = {
+  __typename?: 'trading_pair';
+  asset_1: Scalars['String'];
+  asset_2: Scalars['String'];
+  /** An array relationship */
+  cpmm_reserves: Array<Cpmm_Reserve>;
+  /** An aggregate relationship */
+  cpmm_reserves_aggregate: Cpmm_Reserve_Aggregate;
+  id: Scalars['Int'];
+  /** An array relationship */
+  swap_output_data: Array<Swap_Output_Data>;
+  /** An aggregate relationship */
+  swap_output_data_aggregate: Swap_Output_Data_Aggregate;
+  /** An object relationship */
+  token: Token;
+  /** An object relationship */
+  tokenByAsset2: Token;
+};
+
+
+/** columns and relationships of "trading_pair" */
+export type Trading_PairCpmm_ReservesArgs = {
+  distinct_on?: Maybe<Array<Cpmm_Reserve_Select_Column>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<Cpmm_Reserve_Order_By>>;
+  where?: Maybe<Cpmm_Reserve_Bool_Exp>;
+};
+
+
+/** columns and relationships of "trading_pair" */
+export type Trading_PairCpmm_Reserves_AggregateArgs = {
+  distinct_on?: Maybe<Array<Cpmm_Reserve_Select_Column>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<Cpmm_Reserve_Order_By>>;
+  where?: Maybe<Cpmm_Reserve_Bool_Exp>;
+};
+
+
+/** columns and relationships of "trading_pair" */
+export type Trading_PairSwap_Output_DataArgs = {
+  distinct_on?: Maybe<Array<Swap_Output_Data_Select_Column>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<Swap_Output_Data_Order_By>>;
+  where?: Maybe<Swap_Output_Data_Bool_Exp>;
+};
+
+
+/** columns and relationships of "trading_pair" */
+export type Trading_PairSwap_Output_Data_AggregateArgs = {
+  distinct_on?: Maybe<Array<Swap_Output_Data_Select_Column>>;
+  limit?: Maybe<Scalars['Int']>;
+  offset?: Maybe<Scalars['Int']>;
+  order_by?: Maybe<Array<Swap_Output_Data_Order_By>>;
+  where?: Maybe<Swap_Output_Data_Bool_Exp>;
+};
+
+/** aggregated selection of "trading_pair" */
+export type Trading_Pair_Aggregate = {
+  __typename?: 'trading_pair_aggregate';
+  aggregate?: Maybe<Trading_Pair_Aggregate_Fields>;
+  nodes: Array<Trading_Pair>;
+};
+
+/** aggregate fields of "trading_pair" */
+export type Trading_Pair_Aggregate_Fields = {
+  __typename?: 'trading_pair_aggregate_fields';
+  avg?: Maybe<Trading_Pair_Avg_Fields>;
+  count: Scalars['Int'];
+  max?: Maybe<Trading_Pair_Max_Fields>;
+  min?: Maybe<Trading_Pair_Min_Fields>;
+  stddev?: Maybe<Trading_Pair_Stddev_Fields>;
+  stddev_pop?: Maybe<Trading_Pair_Stddev_Pop_Fields>;
+  stddev_samp?: Maybe<Trading_Pair_Stddev_Samp_Fields>;
+  sum?: Maybe<Trading_Pair_Sum_Fields>;
+  var_pop?: Maybe<Trading_Pair_Var_Pop_Fields>;
+  var_samp?: Maybe<Trading_Pair_Var_Samp_Fields>;
+  variance?: Maybe<Trading_Pair_Variance_Fields>;
+};
+
+
+/** aggregate fields of "trading_pair" */
+export type Trading_Pair_Aggregate_FieldsCountArgs = {
+  columns?: Maybe<Array<Trading_Pair_Select_Column>>;
+  distinct?: Maybe<Scalars['Boolean']>;
+};
+
+/** aggregate avg on columns */
+export type Trading_Pair_Avg_Fields = {
+  __typename?: 'trading_pair_avg_fields';
+  id?: Maybe<Scalars['Float']>;
+};
+
+/** Boolean expression to filter rows from the table "trading_pair". All fields are combined with a logical 'AND'. */
+export type Trading_Pair_Bool_Exp = {
+  _and?: Maybe<Array<Trading_Pair_Bool_Exp>>;
+  _not?: Maybe<Trading_Pair_Bool_Exp>;
+  _or?: Maybe<Array<Trading_Pair_Bool_Exp>>;
+  asset_1?: Maybe<String_Comparison_Exp>;
+  asset_2?: Maybe<String_Comparison_Exp>;
+  cpmm_reserves?: Maybe<Cpmm_Reserve_Bool_Exp>;
+  id?: Maybe<Int_Comparison_Exp>;
+  swap_output_data?: Maybe<Swap_Output_Data_Bool_Exp>;
+  token?: Maybe<Token_Bool_Exp>;
+  tokenByAsset2?: Maybe<Token_Bool_Exp>;
+};
+
+/** aggregate max on columns */
+export type Trading_Pair_Max_Fields = {
+  __typename?: 'trading_pair_max_fields';
+  asset_1?: Maybe<Scalars['String']>;
+  asset_2?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['Int']>;
+};
+
+/** aggregate min on columns */
+export type Trading_Pair_Min_Fields = {
+  __typename?: 'trading_pair_min_fields';
+  asset_1?: Maybe<Scalars['String']>;
+  asset_2?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['Int']>;
+};
+
+/** Ordering options when selecting data from "trading_pair". */
+export type Trading_Pair_Order_By = {
+  asset_1?: Maybe<Order_By>;
+  asset_2?: Maybe<Order_By>;
+  cpmm_reserves_aggregate?: Maybe<Cpmm_Reserve_Aggregate_Order_By>;
+  id?: Maybe<Order_By>;
+  swap_output_data_aggregate?: Maybe<Swap_Output_Data_Aggregate_Order_By>;
+  token?: Maybe<Token_Order_By>;
+  tokenByAsset2?: Maybe<Token_Order_By>;
+};
+
+/** select columns of table "trading_pair" */
+export enum Trading_Pair_Select_Column {
+  /** column name */
+  Asset_1 = 'asset_1',
+  /** column name */
+  Asset_2 = 'asset_2',
+  /** column name */
+  Id = 'id'
+}
+
+/** aggregate stddev on columns */
+export type Trading_Pair_Stddev_Fields = {
+  __typename?: 'trading_pair_stddev_fields';
+  id?: Maybe<Scalars['Float']>;
+};
+
+/** aggregate stddev_pop on columns */
+export type Trading_Pair_Stddev_Pop_Fields = {
+  __typename?: 'trading_pair_stddev_pop_fields';
+  id?: Maybe<Scalars['Float']>;
+};
+
+/** aggregate stddev_samp on columns */
+export type Trading_Pair_Stddev_Samp_Fields = {
+  __typename?: 'trading_pair_stddev_samp_fields';
+  id?: Maybe<Scalars['Float']>;
+};
+
+/** aggregate sum on columns */
+export type Trading_Pair_Sum_Fields = {
+  __typename?: 'trading_pair_sum_fields';
+  id?: Maybe<Scalars['Int']>;
+};
+
+/** aggregate var_pop on columns */
+export type Trading_Pair_Var_Pop_Fields = {
+  __typename?: 'trading_pair_var_pop_fields';
+  id?: Maybe<Scalars['Float']>;
+};
+
+/** aggregate var_samp on columns */
+export type Trading_Pair_Var_Samp_Fields = {
+  __typename?: 'trading_pair_var_samp_fields';
+  id?: Maybe<Scalars['Float']>;
+};
+
+/** aggregate variance on columns */
+export type Trading_Pair_Variance_Fields = {
+  __typename?: 'trading_pair_variance_fields';
+  id?: Maybe<Scalars['Float']>;
 };
 
 /** columns and relationships of "transaction" */
@@ -11757,6 +12751,20 @@ export type ChainIdQuery = { genesis: Array<(
     & { chainId: Genesis['chain_id'] }
   )> };
 
+export type CpmmReserveQueryVariables = Exact<{
+  height?: Maybe<Scalars['bigint']>;
+}>;
+
+
+export type CpmmReserveQuery = { cpmm_reserve: Array<(
+    { __typename?: 'cpmm_reserve' }
+    & Pick<Cpmm_Reserve, 'height' | 'r1' | 'r2'>
+    & { trading_pair: (
+      { __typename?: 'trading_pair' }
+      & Pick<Trading_Pair, 'asset_1' | 'asset_2'>
+    ) }
+  )> };
+
 export type MarketDataQueryVariables = Exact<{
   denom?: Maybe<Scalars['String']>;
 }>;
@@ -11929,6 +12937,20 @@ export type ProposalsQuery = { proposals: Array<(
       & Pick<Proposal_Aggregate_Fields, 'count'>
     )> }
   ) };
+
+export type SwapOutputDataQueryVariables = Exact<{
+  height?: Maybe<Scalars['bigint']>;
+}>;
+
+
+export type SwapOutputDataQuery = { swap_output_data: Array<(
+    { __typename?: 'swap_output_data' }
+    & Pick<Swap_Output_Data, 'delta_1' | 'delta_2' | 'lambda_1' | 'lambda_2' | 'success'>
+    & { trading_pair: (
+      { __typename?: 'trading_pair' }
+      & Pick<Trading_Pair, 'asset_1' | 'asset_2'>
+    ) }
+  )> };
 
 export type TokenPriceListenerSubscriptionVariables = Exact<{
   denom?: Maybe<Scalars['String']>;
@@ -12869,6 +13891,47 @@ export function useChainIdLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<Ch
 export type ChainIdQueryHookResult = ReturnType<typeof useChainIdQuery>;
 export type ChainIdLazyQueryHookResult = ReturnType<typeof useChainIdLazyQuery>;
 export type ChainIdQueryResult = Apollo.QueryResult<ChainIdQuery, ChainIdQueryVariables>;
+export const CpmmReserveDocument = gql`
+    query CpmmReserve($height: bigint) {
+  cpmm_reserve(where: {height: {_eq: $height}}) {
+    height
+    r1
+    r2
+    trading_pair {
+      asset_1
+      asset_2
+    }
+  }
+}
+    `;
+
+/**
+ * __useCpmmReserveQuery__
+ *
+ * To run a query within a React component, call `useCpmmReserveQuery` and pass it any options that fit your needs.
+ * When your component renders, `useCpmmReserveQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useCpmmReserveQuery({
+ *   variables: {
+ *      height: // value for 'height'
+ *   },
+ * });
+ */
+export function useCpmmReserveQuery(baseOptions?: Apollo.QueryHookOptions<CpmmReserveQuery, CpmmReserveQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<CpmmReserveQuery, CpmmReserveQueryVariables>(CpmmReserveDocument, options);
+      }
+export function useCpmmReserveLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<CpmmReserveQuery, CpmmReserveQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<CpmmReserveQuery, CpmmReserveQueryVariables>(CpmmReserveDocument, options);
+        }
+export type CpmmReserveQueryHookResult = ReturnType<typeof useCpmmReserveQuery>;
+export type CpmmReserveLazyQueryHookResult = ReturnType<typeof useCpmmReserveLazyQuery>;
+export type CpmmReserveQueryResult = Apollo.QueryResult<CpmmReserveQuery, CpmmReserveQueryVariables>;
 export const MarketDataDocument = gql`
     query MarketData($denom: String) {
   communityPool: community_pool(order_by: {height: desc}, limit: 1) {
@@ -13295,6 +14358,49 @@ export function useProposalsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<
 export type ProposalsQueryHookResult = ReturnType<typeof useProposalsQuery>;
 export type ProposalsLazyQueryHookResult = ReturnType<typeof useProposalsLazyQuery>;
 export type ProposalsQueryResult = Apollo.QueryResult<ProposalsQuery, ProposalsQueryVariables>;
+export const SwapOutputDataDocument = gql`
+    query SwapOutputData($height: bigint) {
+  swap_output_data(where: {height: {_eq: $height}}) {
+    delta_1
+    delta_2
+    lambda_1
+    lambda_2
+    success
+    trading_pair {
+      asset_1
+      asset_2
+    }
+  }
+}
+    `;
+
+/**
+ * __useSwapOutputDataQuery__
+ *
+ * To run a query within a React component, call `useSwapOutputDataQuery` and pass it any options that fit your needs.
+ * When your component renders, `useSwapOutputDataQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useSwapOutputDataQuery({
+ *   variables: {
+ *      height: // value for 'height'
+ *   },
+ * });
+ */
+export function useSwapOutputDataQuery(baseOptions?: Apollo.QueryHookOptions<SwapOutputDataQuery, SwapOutputDataQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<SwapOutputDataQuery, SwapOutputDataQueryVariables>(SwapOutputDataDocument, options);
+      }
+export function useSwapOutputDataLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<SwapOutputDataQuery, SwapOutputDataQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<SwapOutputDataQuery, SwapOutputDataQueryVariables>(SwapOutputDataDocument, options);
+        }
+export type SwapOutputDataQueryHookResult = ReturnType<typeof useSwapOutputDataQuery>;
+export type SwapOutputDataLazyQueryHookResult = ReturnType<typeof useSwapOutputDataLazyQuery>;
+export type SwapOutputDataQueryResult = Apollo.QueryResult<SwapOutputDataQuery, SwapOutputDataQueryVariables>;
 export const TokenPriceListenerDocument = gql`
     subscription TokenPriceListener($denom: String) {
   tokenPrice: token_price(where: {unit_name: {_eq: $denom}}) {

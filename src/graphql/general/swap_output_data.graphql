@@ -1,0 +1,13 @@
+query SwapOutputData($height: bigint) {
+  swap_output_data(where: {height: {_eq: $height}}) {
+    delta_1
+    delta_2
+    lambda_1
+    lambda_2
+    success
+    trading_pair {
+      asset_1
+      asset_2
+    }
+  }
+}

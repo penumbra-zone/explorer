@@ -1,0 +1,11 @@
+query CpmmReserve($height: bigint){
+  cpmm_reserve(where: {height: {_eq: $height}}) {
+    height
+    r1
+    r2
+    trading_pair {
+      asset_1
+      asset_2
+    }
+  }
+}
