@@ -17,7 +17,7 @@
   "primaryTokenUnit": "penumbra",
   "votingPowerTokenUnit": "penumbra",
   "tokenUnits": {
-    "udaric": {
+    "penumbra": {
       "display": "penumbra",
       "exponent": 1
     }

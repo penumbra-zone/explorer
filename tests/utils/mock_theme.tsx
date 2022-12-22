@@ -1,8 +1,7 @@
 import React from 'react';
 import {
-  ThemeProvider, createMuiTheme,
+  ThemeProvider, createTheme,
 } from '@material-ui/core/styles';
-
 import {
   StylesProvider, StylesOptions,
 } from '@material-ui/styles/';
@@ -12,7 +11,7 @@ import { lightTemplate } from '@styles';
 /**
  * Theme mocker to handle custom keys
  */
-const MockTheme = ({ children }: {children: React.ReactNode}) => {
+const MockTheme = ({ children }: { children: React.ReactNode }) => {
   const generateClassName: StylesOptions['generateClassName'] = (
     rule,
     sheet,
@@ -20,7 +19,7 @@ const MockTheme = ({ children }: {children: React.ReactNode}) => {
 
   return (
     <StylesProvider generateClassName={generateClassName}>
-      <ThemeProvider theme={createMuiTheme(lightTemplate)}>
+      <ThemeProvider theme={createTheme(lightTemplate)}>
         {children}
       </ThemeProvider>
     </StylesProvider>

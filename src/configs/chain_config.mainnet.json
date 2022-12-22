@@ -1,9 +1,9 @@
 {
-  "title": "Penumbra Block Explorer",
+  "title": "Cosmos Block Explorer",
   "network": "cosmoshub-4",
-  "icon": "/images/penumbra-logo.svg",
+  "icon": "/images/icon.svg",
   "logo": {
-    "default": "/images/penumbra-logo.svg"
+    "default": "/images/logo.svg"
   },
   "prefix": {
     "consensus": "cosmosvalcons",
