@@ -3,8 +3,8 @@ import React from 'react';
 import classnames from 'classnames';
 import Trans from 'next-translate/Trans';
 import { useRecoilValue } from 'recoil';
-import FooterLogoLight from '@assets/big-dipper-red.svg';
-import FooterLogoDark from '@assets/big-dipper-white.svg';
+// import FooterLogoLight from '@assets/big-dipper-red.svg';
+// import FooterLogoDark from '@assets/big-dipper-white.svg';
 import {
   Divider,
   Typography,
@@ -112,13 +112,14 @@ const Footer: React.FC<{className?: string}> = ({ className }) => {
               ),
             ]}
             values={{
-              name: generalConfig.maintainer.name,
+              // name: generalConfig.maintainer.name,
+              name: '',
             }}
           />
           {' '}
           {year}
         </Typography>
-        <Typography className="footer__closing--text">
+        {/* <Typography className="footer__closing--text">
           <Trans
             i18nKey="common:maintainBy"
             components={[
@@ -131,7 +132,7 @@ const Footer: React.FC<{className?: string}> = ({ className }) => {
               name: generalConfig.maintainer.name,
             }}
           />
-        </Typography>
+        </Typography> */}
       </div>
     </div>
   );

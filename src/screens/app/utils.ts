@@ -1,11 +1,12 @@
-import { generalConfig } from '@configs';
+// import { generalConfig } from '@configs';
 
 export const OPEN_GRAPH_SEO = {
   type: 'website',
   site_name: 'Penumbra',
   images: [
     {
-      url: generalConfig.previewImage,
+      url: '',
+      // url: generalConfig.previewImage,
       width: 800,
       height: 600,
       alt: 'Preview Photo',
