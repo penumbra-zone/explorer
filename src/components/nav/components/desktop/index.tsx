@@ -66,7 +66,7 @@ const Desktop: React.FC<{
             }),
           }}
         >
-          {theme === 'light' ? (
+          {/* {theme === 'light' ? (
             <BigDipperLogoRed
               className={classes.logo}
               onClick={toggleMenu}
@@ -78,7 +78,7 @@ const Desktop: React.FC<{
               onClick={toggleMenu}
               role="button"
             />
-          )}
+          )} */}
           <MenuItems />
         </Drawer>
       </div>

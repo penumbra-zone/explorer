@@ -32,11 +32,11 @@ const Footer: React.FC<{className?: string}> = ({ className }) => {
         {/* logo */}
         {/* ============================= */}
         <div className="footer__logo--container">
-          {theme === 'light' ? (
+          {/* {theme === 'light' ? (
             <FooterLogoLight className="footer__logo" />
           ) : (
             <FooterLogoDark className="footer__logo" />
-          )}
+          )} */}
           <p className="footer__slogan">{chainConfig.title}</p>
         </div>
         {/* ============================= */}

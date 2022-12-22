@@ -6769,10 +6769,10 @@ path-type@^4.0.0:
   resolved "https://registry.yarnpkg.com/path-type/-/path-type-4.0.0.tgz#84ed01c0a7ba380afe09d90a8c180dcd9d03043b"
   integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
 
-penumbra-web-assembly@0.0.29-eukelade:
-  version "0.0.29-eukelade"
-  resolved "https://registry.yarnpkg.com/penumbra-web-assembly/-/penumbra-web-assembly-0.0.29-eukelade.tgz#8a3ed423c7920d336f2e5a963fb44840628e348d"
-  integrity sha512-OhekytTxmlTbSIgF7U4YshNGV+tU8rW7cTMxX/mCBPcfYBOfW1323xK3KmQigHG5FxOhNJsLVMzPY9kI41ix9w==
+penumbra-web-assembly@0.34.0-spendgenerate:
+  version "0.34.0-spendgenerate"
+  resolved "https://registry.yarnpkg.com/penumbra-web-assembly/-/penumbra-web-assembly-0.34.0-spendgenerate.tgz#d002124f80c54aff3e051370103fc0cec2f06c49"
+  integrity sha512-3S3LGoBmRF3VcZm3WomnVcB78YpRtQFEl3WTx94Ew0un1bF9GcfAa/syimJUfm/hOZIb2/iYrEcbIcak+kQUiA==
 
 picocolors@^1.0.0:
   version "1.0.0"
