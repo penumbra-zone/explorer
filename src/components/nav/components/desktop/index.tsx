@@ -5,10 +5,10 @@ import {
   AppBar,
   ClickAwayListener,
 } from '@material-ui/core';
-import { useRecoilValue } from 'recoil';
-import { readTheme } from '@recoil/settings/selectors';
-import BigDipperLogoWhite from '@assets/big-dipper-white.svg';
-import BigDipperLogoRed from '@assets/big-dipper-red.svg';
+// import { useRecoilValue } from 'recoil';
+// import { readTheme } from '@recoil/settings/selectors';
+// import BigDipperLogoWhite from '@assets/big-dipper-white.svg';
+// import BigDipperLogoRed from '@assets/big-dipper-red.svg';
 import { useStyles } from './styles';
 import { useDesktop } from './hooks';
 import {
@@ -24,10 +24,10 @@ const Desktop: React.FC<{
   className, title,
 }) => {
   const classes = useStyles();
-  const theme = useRecoilValue(readTheme);
+  // const theme = useRecoilValue(readTheme);
   const {
     isMenu,
-    toggleMenu,
+    // toggleMenu,
     turnOffAll,
     toggleNetwork,
     isNetwork,
